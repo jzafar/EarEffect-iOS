@@ -1,0 +1,153 @@
+[
+   
+     {
+        "name": "WH-1000XM4",
+        "model": "SONY",
+        "image": "sony_wh_1000xm4",
+        "type": "Headphones"
+    },
+    {
+        "name": "HEDDphone",
+        "model": "HEDD",
+        "image": "hedd_heddphone",
+        "type": "Headphones"
+    },
+    {
+        "name": "T3-01",
+        "model": "TAGO STUDIO",
+        "image": "tagostudio_t3_01",
+        "type": "Headphones"
+    },
+    {
+        "name": "HD650",
+        "model": "SENNHEISER",
+        "image": "sennheiser_hd650",
+        "type": "Headphones"
+    },
+    {
+        "name": "MOMENTUM Wireless",
+        "model": "SENNHEISER",
+        "image": "sennheiser_momentum_wireless",
+        "type": "Headphones"
+    },
+    {
+        "name": "DT 770 PRO 80ohm",
+        "model": "Beyerdynamic",
+        "image": "beyerdynamic_dt770_80ohm",
+        "type": "Headphones"
+    },
+    {
+        "name": "DT 770 PRO 250ohm",
+        "model": "Beyerdynamic",
+        "image": "beyerdynamic_dt770_250ohm",
+        "type": "Headphones"
+    },
+    {
+        "name": "DT 990 PRO",
+        "model": "Beyerdynamic",
+        "image": "beyerdynamic_dt990",
+        "type": "Headphones"
+    },
+    {
+        "name": "SW-HP300",
+        "model": "Sound Warrior",
+        "image": "soundwarrior_sw_hp300",
+        "type": "Headphones"
+    },
+    {
+        "name": "AirPods Pro",
+        "model": "Apple",
+        "image": "apple_airpods_pro",
+        "type": "EarBuds"
+    },
+    {
+        "name": "WF-XB700",
+        "model": "SONY",
+        "image": "sony_wf_xb700",
+        "type": "EarBuds"
+    },
+    {
+        "name": "WF-SP800N",
+        "model": "SONY",
+        "image": "sony_sp800n",
+        "type": "EarBuds"
+    },
+    {
+        "name": "WF-1000XM4",
+        "model": "SONY",
+        "image": "sony_wf_1000xm4",
+        "type": "EarBuds"
+    },
+    {
+        "name": "MOMENTUM True Wireless 2",
+        "model": "SENNHEISER",
+        "image": "sennheiser_momentum_true_wireless_2",
+        "type": "EarBuds"
+    },
+    {
+        "name": "IE 100 PRO",
+        "model": "SENNHEISER",
+        "image": "sennheiser_ie_100_pro",
+        "type": "EarBuds"
+    },
+    {
+        "name": "Studio Buds",
+        "model": "Beats",
+        "image": "beats_studio_buds",
+        "type": "EarBuds"
+    },
+    {
+        "name": "Fit Pro",
+        "model": "Beats",
+        "image": "beats_fit_pro",
+        "type": "EarBuds"
+    },
+    {
+        "name": "ATH-SQ1TW",
+        "model": "Audio-Technica",
+        "image": "audiotechnica_ath_sq1tw",
+        "type": "EarBuds"
+    },
+    {
+        "name": "ATH-MVL2 IM",
+        "model": "Audio-Technica",
+        "image": "audiotechnica_ath_mvl2_im",
+        "type": "EarBuds"
+    },
+    {
+        "name": "N6 mini",
+        "model": "NUARL",
+        "image": "nuarl_n6_mini",
+        "type": "EarBuds"
+    },
+    {
+        "name": "N6 mini series 2 Special Edition",
+        "model": "NUARL",
+        "image": "nuarl_n6_mini_series_2_special_edition",
+        "type": "EarBuds"
+    },
+    {
+        "name": "EAH-AZ60",
+        "model": "Technics",
+        "image": "technics_eah_az60",
+        "type": "EarBuds"
+    },
+    {
+        "name": "ZE3000",
+        "model": "Final",
+        "image": "final_ze3000",
+        "type": "EarBuds"
+    },
+    {
+        "name": "Emberton",
+        "model": "Marshall",
+        "image": "marshall_emberton",
+        "type": "Wireless Speakers"
+    },
+    {
+        "name": "SRS-XB13",
+        "model": "SONY",
+        "image": "sony_srs_xb",
+        "type": "Wireless Speakers"
+    }
+]

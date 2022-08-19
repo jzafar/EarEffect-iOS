@@ -1,0 +1,1224 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE04B4782883551D00474204 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04B4772883551D00474204 /* UIView.swift */; };
+		CE04B47B2883648C00474204 /* ConnectedStreamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04B47A2883648C00474204 /* ConnectedStreamsViewController.swift */; };
+		CE04B485288490A300474204 /* SpotifyAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04B484288490A300474204 /* SpotifyAuthManager.swift */; };
+		CE04B48A288493E300474204 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04B489288493E300474204 /* SettingViewController.swift */; };
+		CE04B48C2884AAA700474204 /* AvailableStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04B48B2884AAA700474204 /* AvailableStreamViewController.swift */; };
+		CE04B48F28856CFE00474204 /* SpotifyAuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04B48E28856CFE00474204 /* SpotifyAuthResponse.swift */; };
+		CE04B4912885790000474204 /* MusicDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE04B490288578FF00474204 /* MusicDataViewController.swift */; };
+		CE10BC8D287F1AEF00B0548F /* BLEConnectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10BC8C287F1AEF00B0548F /* BLEConnectedViewController.swift */; };
+		CE10BC8F287F21A200B0548F /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE10BC8E287F21A200B0548F /* NotoSans-Regular.ttf */; };
+		CE10BC91287F3A9D00B0548F /* SoundControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10BC90287F3A9D00B0548F /* SoundControlViewController.swift */; };
+		CE10BC96287F4B5100B0548F /* RoundBlackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10BC95287F4B5100B0548F /* RoundBlackView.swift */; };
+		CE10BC98287F566A00B0548F /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10BC97287F566A00B0548F /* BorderView.swift */; };
+		CE1EB102289D50B900E10CB1 /* AlgorithmConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EB101289D50B900E10CB1 /* AlgorithmConsts.swift */; };
+		CE1EB104289D7D7700E10CB1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EB103289D7D7700E10CB1 /* Utilities.swift */; };
+		CE1EB107289EF0CB00E10CB1 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EB106289EF0CB00E10CB1 /* BLEManager.swift */; };
+		CE2BD1C7288D68510027AB6B /* SpotifyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD1C6288D68510027AB6B /* SpotifyUser.swift */; };
+		CE2BD1CC288DD5770027AB6B /* MusicDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD1C8288DD5760027AB6B /* MusicDataTableViewCell.swift */; };
+		CE2BD1CD288DD5770027AB6B /* MusicTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2BD1C9288DD5760027AB6B /* MusicTableViewHeader.xib */; };
+		CE2BD1CE288DD5770027AB6B /* MusicTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD1CA288DD5770027AB6B /* MusicTableViewHeader.swift */; };
+		CE2BD1CF288DD5770027AB6B /* MusicDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2BD1CB288DD5770027AB6B /* MusicDataTableViewCell.xib */; };
+		CE2BD1D3288EBABE0027AB6B /* SpotifyArtistTopTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD1D2288EBABE0027AB6B /* SpotifyArtistTopTracks.swift */; };
+		CE2E57C82886A548002B8310 /* GetAlbumSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E57C72886A548002B8310 /* GetAlbumSongsViewController.swift */; };
+		CE2E57CA2886A5F2002B8310 /* AlbumSongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E57C92886A5F2002B8310 /* AlbumSongTableViewCell.swift */; };
+		CE2E57D52886C7C3002B8310 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E57D42886C7C3002B8310 /* MusicPlayer.swift */; };
+		CE2E57D72886C844002B8310 /* MusicFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E57D62886C844002B8310 /* MusicFile.swift */; };
+		CE2E57D92886E986002B8310 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E57D82886E986002B8310 /* AudioPlayerManager.swift */; };
+		CE2E57DC2886E9EF002B8310 /* AudioTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E57DB2886E9EF002B8310 /* AudioTrack.swift */; };
+		CE2E57DE2886EA1E002B8310 /* AudioTracksQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E57DD2886EA1E002B8310 /* AudioTracksQueue.swift */; };
+		CE2E57E02886EA5A002B8310 /* AVAsset+Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E57DF2886EA5A002B8310 /* AVAsset+Metadata.swift */; };
+		CE2E57E22886ECBE002B8310 /* AudioPlayerManager+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E57E12886ECBE002B8310 /* AudioPlayerManager+URL.swift */; };
+		CE2E57E42886ECF8002B8310 /* AudioURLTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E57E32886ECF8002B8310 /* AudioURLTrack.swift */; };
+		CE2E57E62886ED23002B8310 /* AudioURLTrack+Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E57E52886ED23002B8310 /* AudioURLTrack+Metadata.swift */; };
+		CE2E9EDF2881F610003634D2 /* ModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E9EDE2881F610003634D2 /* ModeViewController.swift */; };
+		CE2E9EE128820290003634D2 /* AutoModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E9EE028820290003634D2 /* AutoModeViewController.swift */; };
+		CE2E9EE3288214BF003634D2 /* ModelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E9EE2288214BF003634D2 /* ModelsViewController.swift */; };
+		CE2E9EE528821534003634D2 /* ModelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E9EE428821534003634D2 /* ModelsTableViewCell.swift */; };
+		CE2E9EE928832C9A003634D2 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E9EE828832C9A003634D2 /* UIButton.swift */; };
+		CE2E9EEB28833767003634D2 /* AlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E9EEA28833767003634D2 /* AlgorithmViewController.swift */; };
+		CE2E9EED28833CB5003634D2 /* HorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E9EEC28833CB5003634D2 /* HorizontalSlider.swift */; };
+		CE304AB82891C8E20079509D /* EarEffectCoreAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE304AB72891C8E20079509D /* EarEffectCoreAudioController.swift */; };
+		CE35398128A10D2E0085E9E3 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE35398028A10D2E0085E9E3 /* GoogleSignInSwift */; };
+		CE35398328A11CFF0085E9E3 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35398228A11CFF0085E9E3 /* LoginUser.swift */; };
+		CE353A2028A13C1E0085E9E3 /* DemoLimiter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3539DC28A13C1D0085E9E3 /* DemoLimiter.cpp */; };
+		CE353A2128A13C1E0085E9E3 /* MidSide.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3539E028A13C1D0085E9E3 /* MidSide.cpp */; };
+		CE353A2228A13C1E0085E9E3 /* Compressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3539E528A13C1D0085E9E3 /* Compressor.cpp */; };
+		CE353A2328A13C1E0085E9E3 /* DemoEQ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3539F628A13C1D0085E9E3 /* DemoEQ.cpp */; };
+		CE353A2428A13C1E0085E9E3 /* IIRFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3539F928A13C1D0085E9E3 /* IIRFilter.cpp */; };
+		CE353A2828A13C1E0085E9E3 /* DemoCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE353A1428A13C1E0085E9E3 /* DemoCompressor.cpp */; };
+		CE36F6F4287CB23400560E3F /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE36F6F3287CB23400560E3F /* IQKeyboardManagerSwift */; };
+		CE36F6F7287CB3A400560E3F /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36F6F6287CB3A400560E3F /* Navigation.swift */; };
+		CE36F6F9287CC57100560E3F /* RegisteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36F6F8287CC57100560E3F /* RegisteredViewController.swift */; };
+		CE36F6FB287CC5DE00560E3F /* DeRegisterationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36F6FA287CC5DE00560E3F /* DeRegisterationViewController.swift */; };
+		CE36F6FD287CC69100560E3F /* DeRegisteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36F6FC287CC69100560E3F /* DeRegisteredViewController.swift */; };
+		CE3E9F7E287C69E8000ED140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E9F7D287C69E8000ED140 /* AppDelegate.swift */; };
+		CE3E9F80287C69E8000ED140 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E9F7F287C69E8000ED140 /* SceneDelegate.swift */; };
+		CE3E9F82287C69E8000ED140 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E9F81287C69E8000ED140 /* ViewController.swift */; };
+		CE3E9F85287C69E8000ED140 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3E9F83287C69E8000ED140 /* Main.storyboard */; };
+		CE3E9F87287C69E9000ED140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3E9F86287C69E9000ED140 /* Assets.xcassets */; };
+		CE3E9F8A287C69E9000ED140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3E9F88287C69E9000ED140 /* LaunchScreen.storyboard */; };
+		CE3E9F9C287C6DF5000ED140 /* Kallisto Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE3E9F92287C6DF4000ED140 /* Kallisto Bold.otf */; };
+		CE3E9FA0287C6DF5000ED140 /* Kallisto Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE3E9F96287C6DF5000ED140 /* Kallisto Thin.otf */; };
+		CE3E9FA1287C6DF5000ED140 /* Kallisto Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE3E9F97287C6DF5000ED140 /* Kallisto Medium.otf */; };
+		CE3E9FA4287C6DF5000ED140 /* Kallisto Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE3E9F9A287C6DF5000ED140 /* Kallisto Light.otf */; };
+		CE3E9FA5287C6DF5000ED140 /* Kallisto Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE3E9F9B287C6DF5000ED140 /* Kallisto Heavy.otf */; };
+		CE3E9FA7287C7066000ED140 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3E9FA6287C7066000ED140 /* NotoSans-Bold.ttf */; };
+		CE3E9FAA287C718A000ED140 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E9FA9287C718A000ED140 /* RoundButton.swift */; };
+		CE3E9FAE287C8557000ED140 /* PolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E9FAD287C8557000ED140 /* PolicyViewController.swift */; };
+		CE3E9FB0287C8726000ED140 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E9FAF287C8726000ED140 /* RegistrationViewController.swift */; };
+		CE3E9FB2287C87F2000ED140 /* NotoSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3E9FB1287C87F2000ED140 /* NotoSans-Medium.ttf */; };
+		CE5617EB2885C96E00326418 /* SpotifyPlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5617EA2885C96E00326418 /* SpotifyPlayList.swift */; };
+		CE5617ED2885CC1400326418 /* SpotifyArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5617EC2885CC1400326418 /* SpotifyArtist.swift */; };
+		CE5617EF2885CEBE00326418 /* SpotifyAlbumDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5617EE2885CEBE00326418 /* SpotifyAlbumDetailsResponse.swift */; };
+		CE5617F12885D3A200326418 /* SpotifyPlayListDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5617F02885D3A200326418 /* SpotifyPlayListDetailsResponse.swift */; };
+		CE5617F32885FAD100326418 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5617F22885FAD100326418 /* AlbumCollectionViewCell.swift */; };
+		CE5617F62886045A00326418 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CE5617F52886045A00326418 /* Kingfisher */; };
+		CE59B897287CA1CC00403D8C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59B896287CA1CC00403D8C /* RegisterViewController.swift */; };
+		CE59B899287CA58B00403D8C /* GBFloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59B898287CA58B00403D8C /* GBFloatingTextField.swift */; };
+		CE59B89E287CAE2D00403D8C /* NotoSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE59B89D287CAE2D00403D8C /* NotoSans-Light.ttf */; };
+		CE6FA8B92889E3F600652484 /* SpotifyPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FA8B82889E3F600652484 /* SpotifyPlayer.swift */; };
+		CE6FA8BB288A780500652484 /* SupportedDevices.json in Resources */ = {isa = PBXBuildFile; fileRef = CE6FA8BA288A780500652484 /* SupportedDevices.json */; };
+		CE6FAC1F288ACD6F00652484 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FAC1E288ACD6F00652484 /* PlayerViewController.swift */; };
+		CE6FAC21288B35E700652484 /* SpotifyPlayBackTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FAC20288B35E700652484 /* SpotifyPlayBackTrack.swift */; };
+		CE7C7326288C870B002C6A07 /* AvailableDevicesCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C7325288C870B002C6A07 /* AvailableDevicesCategoryViewController.swift */; };
+		CE7C7328288C87BC002C6A07 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C7327288C87BC002C6A07 /* Device.swift */; };
+		CE7C7332288CB77D002C6A07 /* PushNotificationSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C7331288CB77D002C6A07 /* PushNotificationSettingsViewController.swift */; };
+		CE7C7334288D1DE6002C6A07 /* LoginInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C7333288D1DE6002C6A07 /* LoginInformationViewController.swift */; };
+		CE7C7336288D1F71002C6A07 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C7335288D1F71002C6A07 /* AboutViewController.swift */; };
+		CE7C7338288D20D3002C6A07 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C7337288D20D3002C6A07 /* HelpViewController.swift */; };
+		CE7C733A288D23B3002C6A07 /* CompanyInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C7339288D23B3002C6A07 /* CompanyInformationViewController.swift */; };
+		CE7C733C288D2A38002C6A07 /* SubmitEnquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C733B288D2A38002C6A07 /* SubmitEnquiryViewController.swift */; };
+		CE7C733E288D4776002C6A07 /* QAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C733D288D4776002C6A07 /* QAViewController.swift */; };
+		CE7C7340288D4943002C6A07 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C733F288D4943002C6A07 /* InstructionsViewController.swift */; };
+		CE7C7342288D50FD002C6A07 /* ConnectedDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C7341288D50FD002C6A07 /* ConnectedDeviceViewController.swift */; };
+		CE90FDE4288061F200ED04A1 /* DotedLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90FDE2288061F200ED04A1 /* DotedLines.swift */; };
+		CE90FDE5288061F200ED04A1 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90FDE3288061F200ED04A1 /* Knob.swift */; };
+		CE970B0828882ABA00678997 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE970B0628882AB900678997 /* SpotifyMetadata.framework */; };
+		CE970B0928882ABA00678997 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE970B0728882ABA00678997 /* SpotifyAudioPlayback.framework */; };
+		CE984A672885A02D00481E02 /* ConnectedStreams.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE984A662885A02D00481E02 /* ConnectedStreams.swift */; };
+		CE984A692885A79500481E02 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE984A682885A79500481E02 /* APICaller.swift */; };
+		CE984A6C2885B1C100481E02 /* SpotifyAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE984A6B2885B1C100481E02 /* SpotifyAlbums.swift */; };
+		CE984A6E2885B3F600481E02 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE984A6D2885B3F600481E02 /* AlbumsViewController.swift */; };
+		CEA4AEFF287E0C4E00C10450 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4AEFB287E0C4E00C10450 /* DotView.swift */; };
+		CEA4AF00287E0C4E00C10450 /* DotsLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4AEFC287E0C4E00C10450 /* DotsLoadingView.swift */; };
+		CEA4AF01287E0C4E00C10450 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA4AEFD287E0C4E00C10450 /* UIColor+hex.swift */; };
+		CEA569E12881E9F9006AEA26 /* Kallisto Lined.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEA569E02881E9F8006AEA26 /* Kallisto Lined.ttf */; };
+		CEA8F123287DCFE600CE9EBE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8F122287DCFE600CE9EBE /* LoginViewController.swift */; };
+		CEA8F125287DEC6100CE9EBE /* BecomeMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8F124287DEC6100CE9EBE /* BecomeMemberViewController.swift */; };
+		CEA8F127287DEC8000CE9EBE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8F126287DEC8000CE9EBE /* BaseViewController.swift */; };
+		CEA8F129287DEE3B00CE9EBE /* StartTrialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8F128287DEE3B00CE9EBE /* StartTrialViewController.swift */; };
+		CEA8F12B287DEEF300CE9EBE /* SixtyMinutesPassedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8F12A287DEEF300CE9EBE /* SixtyMinutesPassedViewController.swift */; };
+		CEA8F12D287DF15600CE9EBE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8F12C287DF15600CE9EBE /* StartViewController.swift */; };
+		CEA8F12F287DF4EF00CE9EBE /* AvailableDeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8F12E287DF4EF00CE9EBE /* AvailableDeviceListViewController.swift */; };
+		CEA8F131287DFD4C00CE9EBE /* DeviceListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8F130287DFD4C00CE9EBE /* DeviceListTableViewCell.swift */; };
+		CEA8F134287E074100CE9EBE /* BLEConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8F133287E074100CE9EBE /* BLEConnectionViewController.swift */; };
+		CEDAA93228808D6E008EA1F0 /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAA93128808D6E008EA1F0 /* VerticalSlider.swift */; };
+		CEDAA934288098DB008EA1F0 /* DotedStragintLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAA933288098DB008EA1F0 /* DotedStragintLine.swift */; };
+		CEDAA9362880A2EF008EA1F0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAA9352880A2EF008EA1F0 /* SettingsViewController.swift */; };
+		CEDAA9382880B068008EA1F0 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAA9372880B068008EA1F0 /* PresentationController.swift */; };
+		CEDAA93A2880B086008EA1F0 /* CardPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAA9392880B086008EA1F0 /* CardPresentationController.swift */; };
+		CEF235BC28873076008368E1 /* SpotifyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF235BB28873076008368E1 /* SpotifyConstants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE04B4772883551D00474204 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		CE04B47A2883648C00474204 /* ConnectedStreamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedStreamsViewController.swift; sourceTree = "<group>"; };
+		CE04B47E288445A900474204 /* EarEffect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EarEffect-Bridging-Header.h"; sourceTree = "<group>"; };
+		CE04B484288490A300474204 /* SpotifyAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAuthManager.swift; sourceTree = "<group>"; };
+		CE04B489288493E300474204 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		CE04B48B2884AAA700474204 /* AvailableStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableStreamViewController.swift; sourceTree = "<group>"; };
+		CE04B48E28856CFE00474204 /* SpotifyAuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAuthResponse.swift; sourceTree = "<group>"; };
+		CE04B490288578FF00474204 /* MusicDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDataViewController.swift; sourceTree = "<group>"; };
+		CE10BC8C287F1AEF00B0548F /* BLEConnectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEConnectedViewController.swift; sourceTree = "<group>"; };
+		CE10BC8E287F21A200B0548F /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
+		CE10BC90287F3A9D00B0548F /* SoundControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundControlViewController.swift; sourceTree = "<group>"; };
+		CE10BC95287F4B5100B0548F /* RoundBlackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBlackView.swift; sourceTree = "<group>"; };
+		CE10BC97287F566A00B0548F /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		CE1EB101289D50B900E10CB1 /* AlgorithmConsts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmConsts.swift; sourceTree = "<group>"; };
+		CE1EB103289D7D7700E10CB1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		CE1EB106289EF0CB00E10CB1 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
+		CE2BD1C6288D68510027AB6B /* SpotifyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyUser.swift; sourceTree = "<group>"; };
+		CE2BD1C8288DD5760027AB6B /* MusicDataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicDataTableViewCell.swift; sourceTree = "<group>"; };
+		CE2BD1C9288DD5760027AB6B /* MusicTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicTableViewHeader.xib; sourceTree = "<group>"; };
+		CE2BD1CA288DD5770027AB6B /* MusicTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewHeader.swift; sourceTree = "<group>"; };
+		CE2BD1CB288DD5770027AB6B /* MusicDataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicDataTableViewCell.xib; sourceTree = "<group>"; };
+		CE2BD1D2288EBABE0027AB6B /* SpotifyArtistTopTracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyArtistTopTracks.swift; sourceTree = "<group>"; };
+		CE2E57C72886A548002B8310 /* GetAlbumSongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlbumSongsViewController.swift; sourceTree = "<group>"; };
+		CE2E57C92886A5F2002B8310 /* AlbumSongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSongTableViewCell.swift; sourceTree = "<group>"; };
+		CE2E57D42886C7C3002B8310 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		CE2E57D62886C844002B8310 /* MusicFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicFile.swift; sourceTree = "<group>"; };
+		CE2E57D82886E986002B8310 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
+		CE2E57DB2886E9EF002B8310 /* AudioTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioTrack.swift; sourceTree = "<group>"; };
+		CE2E57DD2886EA1E002B8310 /* AudioTracksQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioTracksQueue.swift; sourceTree = "<group>"; };
+		CE2E57DF2886EA5A002B8310 /* AVAsset+Metadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVAsset+Metadata.swift"; sourceTree = "<group>"; };
+		CE2E57E12886ECBE002B8310 /* AudioPlayerManager+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioPlayerManager+URL.swift"; sourceTree = "<group>"; };
+		CE2E57E32886ECF8002B8310 /* AudioURLTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioURLTrack.swift; sourceTree = "<group>"; };
+		CE2E57E52886ED23002B8310 /* AudioURLTrack+Metadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioURLTrack+Metadata.swift"; sourceTree = "<group>"; };
+		CE2E9EDE2881F610003634D2 /* ModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeViewController.swift; sourceTree = "<group>"; };
+		CE2E9EE028820290003634D2 /* AutoModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoModeViewController.swift; sourceTree = "<group>"; };
+		CE2E9EE2288214BF003634D2 /* ModelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsViewController.swift; sourceTree = "<group>"; };
+		CE2E9EE428821534003634D2 /* ModelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsTableViewCell.swift; sourceTree = "<group>"; };
+		CE2E9EE828832C9A003634D2 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		CE2E9EEA28833767003634D2 /* AlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmViewController.swift; sourceTree = "<group>"; };
+		CE2E9EEC28833CB5003634D2 /* HorizontalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSlider.swift; sourceTree = "<group>"; };
+		CE304AB72891C8E20079509D /* EarEffectCoreAudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarEffectCoreAudioController.swift; sourceTree = "<group>"; };
+		CE35397E28A106700085E9E3 /* EarEffect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EarEffect.entitlements; sourceTree = "<group>"; };
+		CE35398228A11CFF0085E9E3 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
+		CE3539DA28A13C1D0085E9E3 /* span.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = span.hpp; sourceTree = "<group>"; };
+		CE3539DC28A13C1D0085E9E3 /* DemoLimiter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DemoLimiter.cpp; sourceTree = "<group>"; };
+		CE3539DD28A13C1D0085E9E3 /* DemoLimiter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DemoLimiter.hpp; sourceTree = "<group>"; };
+		CE3539DF28A13C1D0085E9E3 /* LinearSmoothed.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinearSmoothed.hpp; sourceTree = "<group>"; };
+		CE3539E028A13C1D0085E9E3 /* MidSide.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MidSide.cpp; sourceTree = "<group>"; };
+		CE3539E128A13C1D0085E9E3 /* JuceCompressor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = JuceCompressor.hpp; sourceTree = "<group>"; };
+		CE3539E228A13C1D0085E9E3 /* BallisticsFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BallisticsFilter.hpp; sourceTree = "<group>"; };
+		CE3539E328A13C1D0085E9E3 /* Decibels.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Decibels.hpp; sourceTree = "<group>"; };
+		CE3539E428A13C1D0085E9E3 /* AudioBuffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AudioBuffer.hpp; sourceTree = "<group>"; };
+		CE3539E528A13C1D0085E9E3 /* Compressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Compressor.cpp; sourceTree = "<group>"; };
+		CE3539E628A13C1D0085E9E3 /* JuceLimiter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = JuceLimiter.hpp; sourceTree = "<group>"; };
+		CE3539E728A13C1D0085E9E3 /* SoftClipper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SoftClipper.hpp; sourceTree = "<group>"; };
+		CE3539E828A13C1D0085E9E3 /* Limiter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Limiter.hpp; sourceTree = "<group>"; };
+		CE3539E928A13C1D0085E9E3 /* MidSideCompressor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MidSideCompressor.hpp; sourceTree = "<group>"; };
+		CE3539EA28A13C1D0085E9E3 /* Compressor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Compressor.hpp; sourceTree = "<group>"; };
+		CE3539EB28A13C1D0085E9E3 /* StateVariableFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StateVariableFilter.hpp; sourceTree = "<group>"; };
+		CE3539EC28A13C1D0085E9E3 /* MidSide.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MidSide.hpp; sourceTree = "<group>"; };
+		CE3539ED28A13C1D0085E9E3 /* ProcessSpec.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ProcessSpec.hpp; sourceTree = "<group>"; };
+		CE3539F328A13C1D0085E9E3 /* mdspan.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mdspan.hpp; sourceTree = "<group>"; };
+		CE3539F528A13C1D0085E9E3 /* DemoEQ.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DemoEQ.hpp; sourceTree = "<group>"; };
+		CE3539F628A13C1D0085E9E3 /* DemoEQ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DemoEQ.cpp; sourceTree = "<group>"; };
+		CE3539F928A13C1D0085E9E3 /* IIRFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IIRFilter.cpp; sourceTree = "<group>"; };
+		CE353A0028A13C1D0085E9E3 /* MathConstants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MathConstants.hpp; sourceTree = "<group>"; };
+		CE353A0528A13C1D0085E9E3 /* Filter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Filter.hpp; sourceTree = "<group>"; };
+		CE353A0728A13C1D0085E9E3 /* FilterType.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FilterType.hpp; sourceTree = "<group>"; };
+		CE353A0928A13C1D0085E9E3 /* IIRFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IIRFilter.hpp; sourceTree = "<group>"; };
+		CE353A0B28A13C1E0085E9E3 /* Equalizer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Equalizer.hpp; sourceTree = "<group>"; };
+		CE353A1428A13C1E0085E9E3 /* DemoCompressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DemoCompressor.cpp; sourceTree = "<group>"; };
+		CE353A1528A13C1E0085E9E3 /* DemoCompressor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DemoCompressor.hpp; sourceTree = "<group>"; };
+		CE36F6F6287CB3A400560E3F /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		CE36F6F8287CC57100560E3F /* RegisteredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredViewController.swift; sourceTree = "<group>"; };
+		CE36F6FA287CC5DE00560E3F /* DeRegisterationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeRegisterationViewController.swift; sourceTree = "<group>"; };
+		CE36F6FC287CC69100560E3F /* DeRegisteredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeRegisteredViewController.swift; sourceTree = "<group>"; };
+		CE3E9F7A287C69E8000ED140 /* EarEffect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarEffect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3E9F7D287C69E8000ED140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE3E9F7F287C69E8000ED140 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE3E9F81287C69E8000ED140 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE3E9F84287C69E8000ED140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE3E9F86287C69E9000ED140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE3E9F89287C69E9000ED140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE3E9F8B287C69E9000ED140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE3E9F92287C6DF4000ED140 /* Kallisto Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kallisto Bold.otf"; sourceTree = "<group>"; };
+		CE3E9F96287C6DF5000ED140 /* Kallisto Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kallisto Thin.otf"; sourceTree = "<group>"; };
+		CE3E9F97287C6DF5000ED140 /* Kallisto Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kallisto Medium.otf"; sourceTree = "<group>"; };
+		CE3E9F9A287C6DF5000ED140 /* Kallisto Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kallisto Light.otf"; sourceTree = "<group>"; };
+		CE3E9F9B287C6DF5000ED140 /* Kallisto Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kallisto Heavy.otf"; sourceTree = "<group>"; };
+		CE3E9FA6287C7066000ED140 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		CE3E9FA9287C718A000ED140 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		CE3E9FAD287C8557000ED140 /* PolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyViewController.swift; sourceTree = "<group>"; };
+		CE3E9FAF287C8726000ED140 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		CE3E9FB1287C87F2000ED140 /* NotoSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Medium.ttf"; sourceTree = "<group>"; };
+		CE5617EA2885C96E00326418 /* SpotifyPlayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyPlayList.swift; sourceTree = "<group>"; };
+		CE5617EC2885CC1400326418 /* SpotifyArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyArtist.swift; sourceTree = "<group>"; };
+		CE5617EE2885CEBE00326418 /* SpotifyAlbumDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAlbumDetailsResponse.swift; sourceTree = "<group>"; };
+		CE5617F02885D3A200326418 /* SpotifyPlayListDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyPlayListDetailsResponse.swift; sourceTree = "<group>"; };
+		CE5617F22885FAD100326418 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE59B896287CA1CC00403D8C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CE59B898287CA58B00403D8C /* GBFloatingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GBFloatingTextField.swift; sourceTree = "<group>"; };
+		CE59B89D287CAE2D00403D8C /* NotoSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Light.ttf"; sourceTree = "<group>"; };
+		CE6FA8B82889E3F600652484 /* SpotifyPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyPlayer.swift; sourceTree = "<group>"; };
+		CE6FA8BA288A780500652484 /* SupportedDevices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SupportedDevices.json; sourceTree = "<group>"; };
+		CE6FAC1E288ACD6F00652484 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		CE6FAC20288B35E700652484 /* SpotifyPlayBackTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyPlayBackTrack.swift; sourceTree = "<group>"; };
+		CE7C7325288C870B002C6A07 /* AvailableDevicesCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDevicesCategoryViewController.swift; sourceTree = "<group>"; };
+		CE7C7327288C87BC002C6A07 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		CE7C7331288CB77D002C6A07 /* PushNotificationSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationSettingsViewController.swift; sourceTree = "<group>"; };
+		CE7C7333288D1DE6002C6A07 /* LoginInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInformationViewController.swift; sourceTree = "<group>"; };
+		CE7C7335288D1F71002C6A07 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		CE7C7337288D20D3002C6A07 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		CE7C7339288D23B3002C6A07 /* CompanyInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInformationViewController.swift; sourceTree = "<group>"; };
+		CE7C733B288D2A38002C6A07 /* SubmitEnquiryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitEnquiryViewController.swift; sourceTree = "<group>"; };
+		CE7C733D288D4776002C6A07 /* QAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAViewController.swift; sourceTree = "<group>"; };
+		CE7C733F288D4943002C6A07 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		CE7C7341288D50FD002C6A07 /* ConnectedDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedDeviceViewController.swift; sourceTree = "<group>"; };
+		CE90FDE2288061F200ED04A1 /* DotedLines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotedLines.swift; sourceTree = "<group>"; };
+		CE90FDE3288061F200ED04A1 /* Knob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
+		CE970B0628882AB900678997 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = "<group>"; };
+		CE970B0728882ABA00678997 /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
+		CE984A662885A02D00481E02 /* ConnectedStreams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedStreams.swift; sourceTree = "<group>"; };
+		CE984A682885A79500481E02 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		CE984A6B2885B1C100481E02 /* SpotifyAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAlbums.swift; sourceTree = "<group>"; };
+		CE984A6D2885B3F600481E02 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		CEA4AEFB287E0C4E00C10450 /* DotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
+		CEA4AEFC287E0C4E00C10450 /* DotsLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotsLoadingView.swift; sourceTree = "<group>"; };
+		CEA4AEFD287E0C4E00C10450 /* UIColor+hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		CEA569E02881E9F8006AEA26 /* Kallisto Lined.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kallisto Lined.ttf"; sourceTree = "<group>"; };
+		CEA8F122287DCFE600CE9EBE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CEA8F124287DEC6100CE9EBE /* BecomeMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BecomeMemberViewController.swift; sourceTree = "<group>"; };
+		CEA8F126287DEC8000CE9EBE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CEA8F128287DEE3B00CE9EBE /* StartTrialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTrialViewController.swift; sourceTree = "<group>"; };
+		CEA8F12A287DEEF300CE9EBE /* SixtyMinutesPassedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixtyMinutesPassedViewController.swift; sourceTree = "<group>"; };
+		CEA8F12C287DF15600CE9EBE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		CEA8F12E287DF4EF00CE9EBE /* AvailableDeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDeviceListViewController.swift; sourceTree = "<group>"; };
+		CEA8F130287DFD4C00CE9EBE /* DeviceListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewCell.swift; sourceTree = "<group>"; };
+		CEA8F133287E074100CE9EBE /* BLEConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEConnectionViewController.swift; sourceTree = "<group>"; };
+		CEDAA93128808D6E008EA1F0 /* VerticalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
+		CEDAA933288098DB008EA1F0 /* DotedStragintLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotedStragintLine.swift; sourceTree = "<group>"; };
+		CEDAA9352880A2EF008EA1F0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CEDAA9372880B068008EA1F0 /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		CEDAA9392880B086008EA1F0 /* CardPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPresentationController.swift; sourceTree = "<group>"; };
+		CEF235BB28873076008368E1 /* SpotifyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyConstants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE3E9F77287C69E8000ED140 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE35398128A10D2E0085E9E3 /* GoogleSignInSwift in Frameworks */,
+				CE970B0828882ABA00678997 /* SpotifyMetadata.framework in Frameworks */,
+				CE5617F62886045A00326418 /* Kingfisher in Frameworks */,
+				CE36F6F4287CB23400560E3F /* IQKeyboardManagerSwift in Frameworks */,
+				CE970B0928882ABA00678997 /* SpotifyAudioPlayback.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE04B4792883640900474204 /* Controls Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CE10BC90287F3A9D00B0548F /* SoundControlViewController.swift */,
+				CEDAA9352880A2EF008EA1F0 /* SettingsViewController.swift */,
+				CE2E9EDE2881F610003634D2 /* ModeViewController.swift */,
+				CE2E9EE028820290003634D2 /* AutoModeViewController.swift */,
+				CE2E9EE2288214BF003634D2 /* ModelsViewController.swift */,
+				CE2E9EE428821534003634D2 /* ModelsTableViewCell.swift */,
+				CE2E9EEA28833767003634D2 /* AlgorithmViewController.swift */,
+			);
+			path = "Controls Screens";
+			sourceTree = "<group>";
+		};
+		CE04B4832884908300474204 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CEF235BF288731EB008368E1 /* SpotifySDK */,
+				CE1EB103289D7D7700E10CB1 /* Utilities.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CE04B48D28856CE400474204 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE04B48E28856CFE00474204 /* SpotifyAuthResponse.swift */,
+				CE984A662885A02D00481E02 /* ConnectedStreams.swift */,
+				CE984A6B2885B1C100481E02 /* SpotifyAlbums.swift */,
+				CE5617EA2885C96E00326418 /* SpotifyPlayList.swift */,
+				CE5617EC2885CC1400326418 /* SpotifyArtist.swift */,
+				CE5617EE2885CEBE00326418 /* SpotifyAlbumDetailsResponse.swift */,
+				CE5617F02885D3A200326418 /* SpotifyPlayListDetailsResponse.swift */,
+				CE2E57D62886C844002B8310 /* MusicFile.swift */,
+				CE6FAC20288B35E700652484 /* SpotifyPlayBackTrack.swift */,
+				CE7C7327288C87BC002C6A07 /* Device.swift */,
+				CE2BD1C6288D68510027AB6B /* SpotifyUser.swift */,
+				CE2BD1D2288EBABE0027AB6B /* SpotifyArtistTopTracks.swift */,
+				CE1EB101289D50B900E10CB1 /* AlgorithmConsts.swift */,
+				CE35398228A11CFF0085E9E3 /* LoginUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE10BC92287F413E00B0548F /* ConnectionScreens */ = {
+			isa = PBXGroup;
+			children = (
+				CEA8F12E287DF4EF00CE9EBE /* AvailableDeviceListViewController.swift */,
+				CEA8F130287DFD4C00CE9EBE /* DeviceListTableViewCell.swift */,
+				CEA8F133287E074100CE9EBE /* BLEConnectionViewController.swift */,
+				CE10BC8C287F1AEF00B0548F /* BLEConnectedViewController.swift */,
+				CE7C7341288D50FD002C6A07 /* ConnectedDeviceViewController.swift */,
+			);
+			path = ConnectionScreens;
+			sourceTree = "<group>";
+		};
+		CE1EB105289EF0B000E10CB1 /* BlueTooth */ = {
+			isa = PBXGroup;
+			children = (
+				CE1EB106289EF0CB00E10CB1 /* BLEManager.swift */,
+			);
+			path = BlueTooth;
+			sourceTree = "<group>";
+		};
+		CE2E57CB2886BC46002B8310 /* Music Source Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE04B490288578FF00474204 /* MusicDataViewController.swift */,
+				CE984A6D2885B3F600481E02 /* AlbumsViewController.swift */,
+				CE5617F22885FAD100326418 /* AlbumCollectionViewCell.swift */,
+				CE2E57C72886A548002B8310 /* GetAlbumSongsViewController.swift */,
+				CE2E57C92886A5F2002B8310 /* AlbumSongTableViewCell.swift */,
+			);
+			path = "Music Source Controllers";
+			sourceTree = "<group>";
+		};
+		CE2E57CC2886BD00002B8310 /* PlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				CE6FAC1E288ACD6F00652484 /* PlayerViewController.swift */,
+			);
+			path = PlayerView;
+			sourceTree = "<group>";
+		};
+		CE2E57D32886C7A7002B8310 /* MusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				CE2E57D42886C7C3002B8310 /* MusicPlayer.swift */,
+				CE2E57DA2886E9D9002B8310 /* PlayerModel */,
+				CE2E57D82886E986002B8310 /* AudioPlayerManager.swift */,
+			);
+			path = MusicPlayer;
+			sourceTree = "<group>";
+		};
+		CE2E57DA2886E9D9002B8310 /* PlayerModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE2E57DB2886E9EF002B8310 /* AudioTrack.swift */,
+				CE2E57DD2886EA1E002B8310 /* AudioTracksQueue.swift */,
+				CE2E57E12886ECBE002B8310 /* AudioPlayerManager+URL.swift */,
+				CE2E57E32886ECF8002B8310 /* AudioURLTrack.swift */,
+				CE2E57E52886ED23002B8310 /* AudioURLTrack+Metadata.swift */,
+				CE2E57DF2886EA5A002B8310 /* AVAsset+Metadata.swift */,
+			);
+			path = PlayerModel;
+			sourceTree = "<group>";
+		};
+		CE3539D328A13C1D0085E9E3 /* JuceLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				CE353A2A28A13FF40085E9E3 /* dsp */,
+				CE3539D528A13C1D0085E9E3 /* AMDemoLimiter */,
+				CE3539EE28A13C1D0085E9E3 /* AMDemoEQ */,
+				CE353A0D28A13C1E0085E9E3 /* AMDemoCompressor */,
+			);
+			path = JuceLibrary;
+			sourceTree = "<group>";
+		};
+		CE3539D528A13C1D0085E9E3 /* AMDemoLimiter */ = {
+			isa = PBXGroup;
+			children = (
+				CE3539D628A13C1D0085E9E3 /* lib */,
+			);
+			path = AMDemoLimiter;
+			sourceTree = "<group>";
+		};
+		CE3539D628A13C1D0085E9E3 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				CE3539D828A13C1D0085E9E3 /* am */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		CE3539D828A13C1D0085E9E3 /* am */ = {
+			isa = PBXGroup;
+			children = (
+				CE3539DB28A13C1D0085E9E3 /* fx */,
+			);
+			path = am;
+			sourceTree = "<group>";
+		};
+		CE3539DB28A13C1D0085E9E3 /* fx */ = {
+			isa = PBXGroup;
+			children = (
+				CE3539DC28A13C1D0085E9E3 /* DemoLimiter.cpp */,
+				CE3539DD28A13C1D0085E9E3 /* DemoLimiter.hpp */,
+			);
+			path = fx;
+			sourceTree = "<group>";
+		};
+		CE3539EE28A13C1D0085E9E3 /* AMDemoEQ */ = {
+			isa = PBXGroup;
+			children = (
+				CE3539EF28A13C1D0085E9E3 /* lib */,
+			);
+			path = AMDemoEQ;
+			sourceTree = "<group>";
+		};
+		CE3539EF28A13C1D0085E9E3 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				CE3539F028A13C1D0085E9E3 /* am */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		CE3539F028A13C1D0085E9E3 /* am */ = {
+			isa = PBXGroup;
+			children = (
+				CE3539F128A13C1D0085E9E3 /* core */,
+				CE3539F428A13C1D0085E9E3 /* fx */,
+				CE3539F728A13C1D0085E9E3 /* dsp */,
+			);
+			path = am;
+			sourceTree = "<group>";
+		};
+		CE3539F128A13C1D0085E9E3 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				CE3539F328A13C1D0085E9E3 /* mdspan.hpp */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		CE3539F428A13C1D0085E9E3 /* fx */ = {
+			isa = PBXGroup;
+			children = (
+				CE3539F528A13C1D0085E9E3 /* DemoEQ.hpp */,
+				CE3539F628A13C1D0085E9E3 /* DemoEQ.cpp */,
+			);
+			path = fx;
+			sourceTree = "<group>";
+		};
+		CE3539F728A13C1D0085E9E3 /* dsp */ = {
+			isa = PBXGroup;
+			children = (
+				CE3539F928A13C1D0085E9E3 /* IIRFilter.cpp */,
+				CE353A0028A13C1D0085E9E3 /* MathConstants.hpp */,
+				CE353A0528A13C1D0085E9E3 /* Filter.hpp */,
+				CE353A0728A13C1D0085E9E3 /* FilterType.hpp */,
+				CE353A0928A13C1D0085E9E3 /* IIRFilter.hpp */,
+				CE353A0B28A13C1E0085E9E3 /* Equalizer.hpp */,
+			);
+			path = dsp;
+			sourceTree = "<group>";
+		};
+		CE353A0D28A13C1E0085E9E3 /* AMDemoCompressor */ = {
+			isa = PBXGroup;
+			children = (
+				CE353A0E28A13C1E0085E9E3 /* lib */,
+			);
+			path = AMDemoCompressor;
+			sourceTree = "<group>";
+		};
+		CE353A0E28A13C1E0085E9E3 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				CE353A1028A13C1E0085E9E3 /* am */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		CE353A1028A13C1E0085E9E3 /* am */ = {
+			isa = PBXGroup;
+			children = (
+				CE353A1328A13C1E0085E9E3 /* fx */,
+			);
+			path = am;
+			sourceTree = "<group>";
+		};
+		CE353A1328A13C1E0085E9E3 /* fx */ = {
+			isa = PBXGroup;
+			children = (
+				CE353A1428A13C1E0085E9E3 /* DemoCompressor.cpp */,
+				CE353A1528A13C1E0085E9E3 /* DemoCompressor.hpp */,
+			);
+			path = fx;
+			sourceTree = "<group>";
+		};
+		CE353A2A28A13FF40085E9E3 /* dsp */ = {
+			isa = PBXGroup;
+			children = (
+				CE3539DA28A13C1D0085E9E3 /* span.hpp */,
+				CE3539DF28A13C1D0085E9E3 /* LinearSmoothed.hpp */,
+				CE3539E028A13C1D0085E9E3 /* MidSide.cpp */,
+				CE3539EC28A13C1D0085E9E3 /* MidSide.hpp */,
+				CE3539E928A13C1D0085E9E3 /* MidSideCompressor.hpp */,
+				CE3539E128A13C1D0085E9E3 /* JuceCompressor.hpp */,
+				CE3539E228A13C1D0085E9E3 /* BallisticsFilter.hpp */,
+				CE3539E328A13C1D0085E9E3 /* Decibels.hpp */,
+				CE3539E428A13C1D0085E9E3 /* AudioBuffer.hpp */,
+				CE3539E528A13C1D0085E9E3 /* Compressor.cpp */,
+				CE3539EA28A13C1D0085E9E3 /* Compressor.hpp */,
+				CE3539E628A13C1D0085E9E3 /* JuceLimiter.hpp */,
+				CE3539E728A13C1D0085E9E3 /* SoftClipper.hpp */,
+				CE3539E828A13C1D0085E9E3 /* Limiter.hpp */,
+				CE3539EB28A13C1D0085E9E3 /* StateVariableFilter.hpp */,
+				CE3539ED28A13C1D0085E9E3 /* ProcessSpec.hpp */,
+			);
+			path = dsp;
+			sourceTree = "<group>";
+		};
+		CE36F6F5287CB38300560E3F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE36F6F6287CB3A400560E3F /* Navigation.swift */,
+				CEA4AEFD287E0C4E00C10450 /* UIColor+hex.swift */,
+				CE2E9EE828832C9A003634D2 /* UIButton.swift */,
+				CE04B4772883551D00474204 /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE3E9F71287C69E8000ED140 = {
+			isa = PBXGroup;
+			children = (
+				CE3E9F7C287C69E8000ED140 /* EarEffect */,
+				CE3E9F7B287C69E8000ED140 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE3E9F7B287C69E8000ED140 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E9F7A287C69E8000ED140 /* EarEffect.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE3E9F7C287C69E8000ED140 /* EarEffect */ = {
+			isa = PBXGroup;
+			children = (
+				CE35397E28A106700085E9E3 /* EarEffect.entitlements */,
+				CE3539D328A13C1D0085E9E3 /* JuceLibrary */,
+				CE1EB105289EF0B000E10CB1 /* BlueTooth */,
+				CE2E57D32886C7A7002B8310 /* MusicPlayer */,
+				CE2E57CC2886BD00002B8310 /* PlayerView */,
+				CE984A5B28858E2500481E02 /* Views */,
+				CE04B48D28856CE400474204 /* Models */,
+				CE04B4832884908300474204 /* Managers */,
+				CE36F6F5287CB38300560E3F /* Extensions */,
+				CE3E9FA8287C7167000ED140 /* Custom Views */,
+				CE3E9F7D287C69E8000ED140 /* AppDelegate.swift */,
+				CE3E9F7F287C69E8000ED140 /* SceneDelegate.swift */,
+				CE3E9F81287C69E8000ED140 /* ViewController.swift */,
+				CE3E9F83287C69E8000ED140 /* Main.storyboard */,
+				CE3E9F86287C69E9000ED140 /* Assets.xcassets */,
+				CE3E9F91287C6DD5000ED140 /* Fonts */,
+				CE3E9F88287C69E9000ED140 /* LaunchScreen.storyboard */,
+				CE3E9F8B287C69E9000ED140 /* Info.plist */,
+				CE6FA8BA288A780500652484 /* SupportedDevices.json */,
+				CE970B0728882ABA00678997 /* SpotifyAudioPlayback.framework */,
+				CE970B0628882AB900678997 /* SpotifyMetadata.framework */,
+				CE3E9FAD287C8557000ED140 /* PolicyViewController.swift */,
+				CEA8F121287DCFA500CE9EBE /* RegisterHS */,
+				CEA8F132287E06E100CE9EBE /* Login-Member */,
+				CE10BC92287F413E00B0548F /* ConnectionScreens */,
+				CE04B4792883640900474204 /* Controls Screens */,
+				CE7C7324288C8600002C6A07 /* SettingView */,
+				CE04B47E288445A900474204 /* EarEffect-Bridging-Header.h */,
+				CE2E57CB2886BC46002B8310 /* Music Source Controllers */,
+			);
+			path = EarEffect;
+			sourceTree = "<group>";
+		};
+		CE3E9F91287C6DD5000ED140 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E9F92287C6DF4000ED140 /* Kallisto Bold.otf */,
+				CE3E9F9B287C6DF5000ED140 /* Kallisto Heavy.otf */,
+				CE3E9F9A287C6DF5000ED140 /* Kallisto Light.otf */,
+				CE3E9F97287C6DF5000ED140 /* Kallisto Medium.otf */,
+				CEA569E02881E9F8006AEA26 /* Kallisto Lined.ttf */,
+				CE3E9F96287C6DF5000ED140 /* Kallisto Thin.otf */,
+				CE3E9FA6287C7066000ED140 /* NotoSans-Bold.ttf */,
+				CE3E9FB1287C87F2000ED140 /* NotoSans-Medium.ttf */,
+				CE59B89D287CAE2D00403D8C /* NotoSans-Light.ttf */,
+				CE10BC8E287F21A200B0548F /* NotoSans-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CE3E9FA8287C7167000ED140 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE90FDE1288061D700ED04A1 /* KnobView */,
+				CEA4AEFA287E0C4E00C10450 /* DotLoader */,
+				CE59B898287CA58B00403D8C /* GBFloatingTextField.swift */,
+				CE3E9FA9287C718A000ED140 /* RoundButton.swift */,
+				CE10BC95287F4B5100B0548F /* RoundBlackView.swift */,
+				CE10BC97287F566A00B0548F /* BorderView.swift */,
+				CEDAA93128808D6E008EA1F0 /* VerticalSlider.swift */,
+				CEDAA933288098DB008EA1F0 /* DotedStragintLine.swift */,
+				CEDAA9372880B068008EA1F0 /* PresentationController.swift */,
+				CEDAA9392880B086008EA1F0 /* CardPresentationController.swift */,
+				CE2E9EEC28833CB5003634D2 /* HorizontalSlider.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		CE7C7324288C8600002C6A07 /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				CE04B489288493E300474204 /* SettingViewController.swift */,
+				CE04B47A2883648C00474204 /* ConnectedStreamsViewController.swift */,
+				CE04B48B2884AAA700474204 /* AvailableStreamViewController.swift */,
+				CE7C7325288C870B002C6A07 /* AvailableDevicesCategoryViewController.swift */,
+				CE7C7331288CB77D002C6A07 /* PushNotificationSettingsViewController.swift */,
+				CE7C7333288D1DE6002C6A07 /* LoginInformationViewController.swift */,
+				CE7C7335288D1F71002C6A07 /* AboutViewController.swift */,
+				CE7C7337288D20D3002C6A07 /* HelpViewController.swift */,
+				CE7C7339288D23B3002C6A07 /* CompanyInformationViewController.swift */,
+				CE7C733B288D2A38002C6A07 /* SubmitEnquiryViewController.swift */,
+				CE7C733D288D4776002C6A07 /* QAViewController.swift */,
+				CE7C733F288D4943002C6A07 /* InstructionsViewController.swift */,
+			);
+			path = SettingView;
+			sourceTree = "<group>";
+		};
+		CE90FDE1288061D700ED04A1 /* KnobView */ = {
+			isa = PBXGroup;
+			children = (
+				CE90FDE2288061F200ED04A1 /* DotedLines.swift */,
+				CE90FDE3288061F200ED04A1 /* Knob.swift */,
+			);
+			path = KnobView;
+			sourceTree = "<group>";
+		};
+		CE984A5B28858E2500481E02 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE2BD1C8288DD5760027AB6B /* MusicDataTableViewCell.swift */,
+				CE2BD1CB288DD5770027AB6B /* MusicDataTableViewCell.xib */,
+				CE2BD1CA288DD5770027AB6B /* MusicTableViewHeader.swift */,
+				CE2BD1C9288DD5760027AB6B /* MusicTableViewHeader.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEA4AEFA287E0C4E00C10450 /* DotLoader */ = {
+			isa = PBXGroup;
+			children = (
+				CEA4AEFB287E0C4E00C10450 /* DotView.swift */,
+				CEA4AEFC287E0C4E00C10450 /* DotsLoadingView.swift */,
+			);
+			path = DotLoader;
+			sourceTree = "<group>";
+		};
+		CEA8F121287DCFA500CE9EBE /* RegisterHS */ = {
+			isa = PBXGroup;
+			children = (
+				CE59B896287CA1CC00403D8C /* RegisterViewController.swift */,
+				CE3E9FAF287C8726000ED140 /* RegistrationViewController.swift */,
+				CE36F6F8287CC57100560E3F /* RegisteredViewController.swift */,
+				CE36F6FA287CC5DE00560E3F /* DeRegisterationViewController.swift */,
+				CE36F6FC287CC69100560E3F /* DeRegisteredViewController.swift */,
+			);
+			path = RegisterHS;
+			sourceTree = "<group>";
+		};
+		CEA8F132287E06E100CE9EBE /* Login-Member */ = {
+			isa = PBXGroup;
+			children = (
+				CEA8F122287DCFE600CE9EBE /* LoginViewController.swift */,
+				CEA8F124287DEC6100CE9EBE /* BecomeMemberViewController.swift */,
+				CEA8F126287DEC8000CE9EBE /* BaseViewController.swift */,
+				CEA8F128287DEE3B00CE9EBE /* StartTrialViewController.swift */,
+				CEA8F12A287DEEF300CE9EBE /* SixtyMinutesPassedViewController.swift */,
+				CEA8F12C287DF15600CE9EBE /* StartViewController.swift */,
+			);
+			path = "Login-Member";
+			sourceTree = "<group>";
+		};
+		CEF235BF288731EB008368E1 /* SpotifySDK */ = {
+			isa = PBXGroup;
+			children = (
+				CEF235BB28873076008368E1 /* SpotifyConstants.swift */,
+				CE6FA8B82889E3F600652484 /* SpotifyPlayer.swift */,
+				CE04B484288490A300474204 /* SpotifyAuthManager.swift */,
+				CE984A682885A79500481E02 /* APICaller.swift */,
+				CE304AB72891C8E20079509D /* EarEffectCoreAudioController.swift */,
+			);
+			path = SpotifySDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE3E9F79287C69E8000ED140 /* EarEffect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE3E9F8E287C69E9000ED140 /* Build configuration list for PBXNativeTarget "EarEffect" */;
+			buildPhases = (
+				CE3E9F76287C69E8000ED140 /* Sources */,
+				CE3E9F77287C69E8000ED140 /* Frameworks */,
+				CE3E9F78287C69E8000ED140 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EarEffect;
+			packageProductDependencies = (
+				CE36F6F3287CB23400560E3F /* IQKeyboardManagerSwift */,
+				CE5617F52886045A00326418 /* Kingfisher */,
+				CE35398028A10D2E0085E9E3 /* GoogleSignInSwift */,
+			);
+			productName = EarEffect;
+			productReference = CE3E9F7A287C69E8000ED140 /* EarEffect.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE3E9F72287C69E8000ED140 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					CE3E9F79287C69E8000ED140 = {
+						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
+					};
+				};
+			};
+			buildConfigurationList = CE3E9F75287C69E8000ED140 /* Build configuration list for PBXProject "EarEffect" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE3E9F71287C69E8000ED140;
+			packageReferences = (
+				CE36F6F2287CB23400560E3F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				CE5617F42886045A00326418 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				CE35397F28A10D2E0085E9E3 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
+			productRefGroup = CE3E9F7B287C69E8000ED140 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE3E9F79287C69E8000ED140 /* EarEffect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE3E9F78287C69E8000ED140 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3E9FA1287C6DF5000ED140 /* Kallisto Medium.otf in Resources */,
+				CE3E9FA5287C6DF5000ED140 /* Kallisto Heavy.otf in Resources */,
+				CE3E9F9C287C6DF5000ED140 /* Kallisto Bold.otf in Resources */,
+				CE10BC8F287F21A200B0548F /* NotoSans-Regular.ttf in Resources */,
+				CEA569E12881E9F9006AEA26 /* Kallisto Lined.ttf in Resources */,
+				CE3E9F8A287C69E9000ED140 /* LaunchScreen.storyboard in Resources */,
+				CE3E9FA4287C6DF5000ED140 /* Kallisto Light.otf in Resources */,
+				CE6FA8BB288A780500652484 /* SupportedDevices.json in Resources */,
+				CE59B89E287CAE2D00403D8C /* NotoSans-Light.ttf in Resources */,
+				CE2BD1CF288DD5770027AB6B /* MusicDataTableViewCell.xib in Resources */,
+				CE3E9F87287C69E9000ED140 /* Assets.xcassets in Resources */,
+				CE3E9FA7287C7066000ED140 /* NotoSans-Bold.ttf in Resources */,
+				CE2BD1CD288DD5770027AB6B /* MusicTableViewHeader.xib in Resources */,
+				CE3E9FA0287C6DF5000ED140 /* Kallisto Thin.otf in Resources */,
+				CE3E9F85287C69E8000ED140 /* Main.storyboard in Resources */,
+				CE3E9FB2287C87F2000ED140 /* NotoSans-Medium.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE3E9F76287C69E8000ED140 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE984A6E2885B3F600481E02 /* AlbumsViewController.swift in Sources */,
+				CE353A2128A13C1E0085E9E3 /* MidSide.cpp in Sources */,
+				CE7C7334288D1DE6002C6A07 /* LoginInformationViewController.swift in Sources */,
+				CE36F6F9287CC57100560E3F /* RegisteredViewController.swift in Sources */,
+				CE10BC91287F3A9D00B0548F /* SoundControlViewController.swift in Sources */,
+				CE2E9EE128820290003634D2 /* AutoModeViewController.swift in Sources */,
+				CE353A2328A13C1E0085E9E3 /* DemoEQ.cpp in Sources */,
+				CE2E57E22886ECBE002B8310 /* AudioPlayerManager+URL.swift in Sources */,
+				CEDAA9362880A2EF008EA1F0 /* SettingsViewController.swift in Sources */,
+				CE3E9FB0287C8726000ED140 /* RegistrationViewController.swift in Sources */,
+				CEA8F129287DEE3B00CE9EBE /* StartTrialViewController.swift in Sources */,
+				CE2BD1CE288DD5770027AB6B /* MusicTableViewHeader.swift in Sources */,
+				CE3E9FAA287C718A000ED140 /* RoundButton.swift in Sources */,
+				CE353A2228A13C1E0085E9E3 /* Compressor.cpp in Sources */,
+				CEA8F12B287DEEF300CE9EBE /* SixtyMinutesPassedViewController.swift in Sources */,
+				CE2E57E02886EA5A002B8310 /* AVAsset+Metadata.swift in Sources */,
+				CE2E9EDF2881F610003634D2 /* ModeViewController.swift in Sources */,
+				CE2E57E62886ED23002B8310 /* AudioURLTrack+Metadata.swift in Sources */,
+				CE7C733A288D23B3002C6A07 /* CompanyInformationViewController.swift in Sources */,
+				CE2E57CA2886A5F2002B8310 /* AlbumSongTableViewCell.swift in Sources */,
+				CE04B48C2884AAA700474204 /* AvailableStreamViewController.swift in Sources */,
+				CE7C733C288D2A38002C6A07 /* SubmitEnquiryViewController.swift in Sources */,
+				CE2E57D52886C7C3002B8310 /* MusicPlayer.swift in Sources */,
+				CEA8F12D287DF15600CE9EBE /* StartViewController.swift in Sources */,
+				CE2E9EE528821534003634D2 /* ModelsTableViewCell.swift in Sources */,
+				CE90FDE5288061F200ED04A1 /* Knob.swift in Sources */,
+				CE59B899287CA58B00403D8C /* GBFloatingTextField.swift in Sources */,
+				CE59B897287CA1CC00403D8C /* RegisterViewController.swift in Sources */,
+				CE10BC8D287F1AEF00B0548F /* BLEConnectedViewController.swift in Sources */,
+				CEDAA93A2880B086008EA1F0 /* CardPresentationController.swift in Sources */,
+				CE04B48F28856CFE00474204 /* SpotifyAuthResponse.swift in Sources */,
+				CE2BD1C7288D68510027AB6B /* SpotifyUser.swift in Sources */,
+				CE5617EF2885CEBE00326418 /* SpotifyAlbumDetailsResponse.swift in Sources */,
+				CE1EB104289D7D7700E10CB1 /* Utilities.swift in Sources */,
+				CE6FA8B92889E3F600652484 /* SpotifyPlayer.swift in Sources */,
+				CEA8F127287DEC8000CE9EBE /* BaseViewController.swift in Sources */,
+				CE10BC96287F4B5100B0548F /* RoundBlackView.swift in Sources */,
+				CEA4AF01287E0C4E00C10450 /* UIColor+hex.swift in Sources */,
+				CE35398328A11CFF0085E9E3 /* LoginUser.swift in Sources */,
+				CE5617F12885D3A200326418 /* SpotifyPlayListDetailsResponse.swift in Sources */,
+				CE3E9F82287C69E8000ED140 /* ViewController.swift in Sources */,
+				CE6FAC1F288ACD6F00652484 /* PlayerViewController.swift in Sources */,
+				CEA8F125287DEC6100CE9EBE /* BecomeMemberViewController.swift in Sources */,
+				CE7C7328288C87BC002C6A07 /* Device.swift in Sources */,
+				CE36F6FD287CC69100560E3F /* DeRegisteredViewController.swift in Sources */,
+				CE04B48A288493E300474204 /* SettingViewController.swift in Sources */,
+				CE5617F32885FAD100326418 /* AlbumCollectionViewCell.swift in Sources */,
+				CE7C7338288D20D3002C6A07 /* HelpViewController.swift in Sources */,
+				CE3E9FAE287C8557000ED140 /* PolicyViewController.swift in Sources */,
+				CE2E57DE2886EA1E002B8310 /* AudioTracksQueue.swift in Sources */,
+				CE2E57D72886C844002B8310 /* MusicFile.swift in Sources */,
+				CEA4AF00287E0C4E00C10450 /* DotsLoadingView.swift in Sources */,
+				CE36F6FB287CC5DE00560E3F /* DeRegisterationViewController.swift in Sources */,
+				CEDAA9382880B068008EA1F0 /* PresentationController.swift in Sources */,
+				CE36F6F7287CB3A400560E3F /* Navigation.swift in Sources */,
+				CE10BC98287F566A00B0548F /* BorderView.swift in Sources */,
+				CE7C7326288C870B002C6A07 /* AvailableDevicesCategoryViewController.swift in Sources */,
+				CE2BD1CC288DD5770027AB6B /* MusicDataTableViewCell.swift in Sources */,
+				CE2E9EEB28833767003634D2 /* AlgorithmViewController.swift in Sources */,
+				CE353A2828A13C1E0085E9E3 /* DemoCompressor.cpp in Sources */,
+				CEDAA934288098DB008EA1F0 /* DotedStragintLine.swift in Sources */,
+				CE1EB102289D50B900E10CB1 /* AlgorithmConsts.swift in Sources */,
+				CE2BD1D3288EBABE0027AB6B /* SpotifyArtistTopTracks.swift in Sources */,
+				CE304AB82891C8E20079509D /* EarEffectCoreAudioController.swift in Sources */,
+				CE2E9EED28833CB5003634D2 /* HorizontalSlider.swift in Sources */,
+				CEA8F131287DFD4C00CE9EBE /* DeviceListTableViewCell.swift in Sources */,
+				CE7C7342288D50FD002C6A07 /* ConnectedDeviceViewController.swift in Sources */,
+				CEA4AEFF287E0C4E00C10450 /* DotView.swift in Sources */,
+				CEF235BC28873076008368E1 /* SpotifyConstants.swift in Sources */,
+				CE7C733E288D4776002C6A07 /* QAViewController.swift in Sources */,
+				CEDAA93228808D6E008EA1F0 /* VerticalSlider.swift in Sources */,
+				CE04B4912885790000474204 /* MusicDataViewController.swift in Sources */,
+				CE90FDE4288061F200ED04A1 /* DotedLines.swift in Sources */,
+				CE3E9F7E287C69E8000ED140 /* AppDelegate.swift in Sources */,
+				CE1EB107289EF0CB00E10CB1 /* BLEManager.swift in Sources */,
+				CE04B485288490A300474204 /* SpotifyAuthManager.swift in Sources */,
+				CE04B47B2883648C00474204 /* ConnectedStreamsViewController.swift in Sources */,
+				CE04B4782883551D00474204 /* UIView.swift in Sources */,
+				CEA8F134287E074100CE9EBE /* BLEConnectionViewController.swift in Sources */,
+				CE353A2028A13C1E0085E9E3 /* DemoLimiter.cpp in Sources */,
+				CE2E57E42886ECF8002B8310 /* AudioURLTrack.swift in Sources */,
+				CE5617EB2885C96E00326418 /* SpotifyPlayList.swift in Sources */,
+				CE7C7340288D4943002C6A07 /* InstructionsViewController.swift in Sources */,
+				CE6FAC21288B35E700652484 /* SpotifyPlayBackTrack.swift in Sources */,
+				CE2E57C82886A548002B8310 /* GetAlbumSongsViewController.swift in Sources */,
+				CE7C7332288CB77D002C6A07 /* PushNotificationSettingsViewController.swift in Sources */,
+				CE2E9EE928832C9A003634D2 /* UIButton.swift in Sources */,
+				CE2E57DC2886E9EF002B8310 /* AudioTrack.swift in Sources */,
+				CEA8F123287DCFE600CE9EBE /* LoginViewController.swift in Sources */,
+				CE5617ED2885CC1400326418 /* SpotifyArtist.swift in Sources */,
+				CE984A6C2885B1C100481E02 /* SpotifyAlbums.swift in Sources */,
+				CE984A692885A79500481E02 /* APICaller.swift in Sources */,
+				CEA8F12F287DF4EF00CE9EBE /* AvailableDeviceListViewController.swift in Sources */,
+				CE353A2428A13C1E0085E9E3 /* IIRFilter.cpp in Sources */,
+				CE984A672885A02D00481E02 /* ConnectedStreams.swift in Sources */,
+				CE2E57D92886E986002B8310 /* AudioPlayerManager.swift in Sources */,
+				CE2E9EE3288214BF003634D2 /* ModelsViewController.swift in Sources */,
+				CE7C7336288D1F71002C6A07 /* AboutViewController.swift in Sources */,
+				CE3E9F80287C69E8000ED140 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE3E9F83287C69E8000ED140 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE3E9F84287C69E8000ED140 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE3E9F88287C69E9000ED140 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE3E9F89287C69E9000ED140 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE3E9F8C287C69E9000ED140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE3E9F8D287C69E9000ED140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE3E9F8F287C69E9000ED140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = EarEffect/EarEffect.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2.2;
+				DEVELOPMENT_TEAM = C86ZFMZ4X9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EarEffect",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EarEffect/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Application need to access bluetooth to connect with Head Phone";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Application need to access bluetooth to connect with Head Phone";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UlInterfaceOrientationPortraitUpsideDown UlinterfaceOrientationLandscapeRight UlinterfaceOrientationLandscapeLeft";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amgroupkk.eareffect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EarEffect/EarEffect-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CE3E9F90287C69E9000ED140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = EarEffect/EarEffect.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2.2;
+				DEVELOPMENT_TEAM = C86ZFMZ4X9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EarEffect",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EarEffect/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Application need to access bluetooth to connect with Head Phone";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Application need to access bluetooth to connect with Head Phone";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UlInterfaceOrientationPortraitUpsideDown UlinterfaceOrientationLandscapeRight UlinterfaceOrientationLandscapeLeft";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amgroupkk.eareffect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EarEffect/EarEffect-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE3E9F75287C69E8000ED140 /* Build configuration list for PBXProject "EarEffect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE3E9F8C287C69E9000ED140 /* Debug */,
+				CE3E9F8D287C69E9000ED140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE3E9F8E287C69E9000ED140 /* Build configuration list for PBXNativeTarget "EarEffect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE3E9F8F287C69E9000ED140 /* Debug */,
+				CE3E9F90287C69E9000ED140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE35397F28A10D2E0085E9E3 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.2;
+			};
+		};
+		CE36F6F2287CB23400560E3F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+		CE5617F42886045A00326418 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE35398028A10D2E0085E9E3 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE35397F28A10D2E0085E9E3 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		CE36F6F3287CB23400560E3F /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE36F6F2287CB23400560E3F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		CE5617F52886045A00326418 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE5617F42886045A00326418 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CE3E9F72287C69E8000ED140 /* Project object */;
+}
