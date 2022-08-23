@@ -4,6 +4,7 @@
 #include "FilterType.hpp"
 #include "IIRFilter.hpp"
 #include "ProcessSpec.hpp"
+#include "ProcessorDuplicator.hpp"
 
 #include <mutex>
 
@@ -34,11 +35,11 @@ struct Filter
     auto reset() -> void;
 
 private:
-    using Band = std::array<typename IIR::Filter<SampleType>, 2>;
+    using Band = ProcessorDuplicator<T, IIR::Filter<T>, IIR::Coefficients<T>>;
 
     std::mutex _mutex{};
     Band _filter{};
-    ProcessSpec _spec{};
+    ProcessSpec _spec{44'100, 512, 2};
 };
 
 template<typename T>
@@ -61,33 +62,43 @@ auto Filter<T>::parameter(Parameter const& p) -> void
         return Coeffs::makePeakFilter(sr, 1'000.0F, 0.707F, 1.0F);
     }();
 
+    auto const emptyCoeffs = std::array{1.0F, 1.0F, 1.0F, 1.0F, 1.0F, 1.0F};
+
     std::lock_guard<std::mutex> lock{_mutex};
-    _filter[0].coefficients = coeffs;
-    _filter[1].coefficients = coeffs;
+    *_filter.state = coeffs;
+    _filter.reset();
 }
 
 template<typename T>
 auto Filter<T>::prepare(ProcessSpec const& spec) -> void
 {
+    std::lock_guard<std::mutex> lock{_mutex};
     _spec = spec;
-    _filter[0].prepare(spec);
-    _filter[1].prepare(spec);
+
+    _filter.prepare(spec);
+    _filter.reset();
 }
 
 template<typename T>
 auto Filter<T>::process(AudioBuffer<T>& buffer) -> void
 {
+    std::lock_guard<std::mutex> lock{_mutex};
+    // assert(!containsInvalidFloats(buffer));
+
     for (auto i = size_t{}; i < buffer.numSamples(); ++i)
     {
-        buffer(0, i) = _filter[0].processSample(buffer(0, i));
-        buffer(1, i) = _filter[0].processSample(buffer(1, i));
+        buffer(0, i) = _filter.processSample(0, buffer(0, i));
+        buffer(1, i) = _filter.processSample(1, buffer(1, i));
     }
+
+    // _filter.snapToZero();
 }
 
 template<typename T>
 auto Filter<T>::reset() -> void
 {
-    _filter[0].reset();
-    _filter[1].reset();
+    std::lock_guard<std::mutex> lock{_mutex};
+
+    _filter.reset();
 }
 }  // namespace am

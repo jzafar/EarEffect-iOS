@@ -24,11 +24,12 @@ class MusicDataViewController: BaseViewController {
 
         let cell = UINib(nibName: "MusicDataTableViewCell", bundle: nil)
         tableView.register(cell, forCellReuseIdentifier: "cell")
-        connectedStreams = ConnectedStreams.getConnectedStream()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         isArtists = false
+        connectedStreams = ConnectedStreams.getConnectedStream()
     }
     @IBAction func settingBtnPressed(_ sender: UIBarButtonItem) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
@@ -44,6 +45,8 @@ class MusicDataViewController: BaseViewController {
     }
     @objc private func songsBtnPressed(_ sender: RoundButton){
         selectedStram = sender.streamButton ?? .spotify
+        type = .Songs
+        self.performSegue(withIdentifier: "GetAlbumSongsViewController", sender: self)
     }
     @objc private func albumBtnPressed(_ sender: RoundButton){
         type = .Albums
@@ -66,7 +69,11 @@ class MusicDataViewController: BaseViewController {
             vc?.shouldFetchArtistAlbum = isArtists
         } else if segue.identifier == "PlayerViewController" {
             self.playerController = segue.destination as? PlayerViewController
-       }
+        } else if segue.identifier == "GetAlbumSongsViewController" {
+            let vc = segue.destination as? GetAlbumSongsViewController
+            vc?.type = type
+            vc?.stream = selectedStram
+        }
         
     }
     
@@ -121,4 +128,5 @@ enum AlbumOrArtist {
     case Albums
     case Artists
     case PlayLists
+    case Songs
 }

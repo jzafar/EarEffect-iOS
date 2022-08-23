@@ -4,7 +4,8 @@
 
 #include <cassert>
 
-namespace am {
+namespace am
+{
 
 enum class BallisticsFilterLevelCalculationType
 {

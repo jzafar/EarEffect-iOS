@@ -13,6 +13,9 @@ struct ConnectedStreams {
         if SpotifyAuthManager.shared.isSignedIn {
             streams.append(.spotify)
         }
+        if AppleMusicManager.shared.isSignedIn {
+            streams.append(.apple)
+        }
         return streams
     }
 }

@@ -19,6 +19,17 @@
 		CE10BC91287F3A9D00B0548F /* SoundControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10BC90287F3A9D00B0548F /* SoundControlViewController.swift */; };
 		CE10BC96287F4B5100B0548F /* RoundBlackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10BC95287F4B5100B0548F /* RoundBlackView.swift */; };
 		CE10BC98287F566A00B0548F /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10BC97287F566A00B0548F /* BorderView.swift */; };
+		CE13707C28A3C09F003252A8 /* AppleMusicConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13707B28A3C09F003252A8 /* AppleMusicConstants.swift */; };
+		CE13707E28A3DE3A003252A8 /* AppleMusicApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13707D28A3DE3A003252A8 /* AppleMusicApiCaller.swift */; };
+		CE13708228A3ED15003252A8 /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13707F28A3ED14003252A8 /* MediaItem.swift */; };
+		CE13708328A3ED15003252A8 /* SerializationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13708028A3ED14003252A8 /* SerializationError.swift */; };
+		CE13708428A3ED15003252A8 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13708128A3ED15003252A8 /* Artwork.swift */; };
+		CE13708628A3ED2C003252A8 /* JSONKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13708528A3ED2C003252A8 /* JSONKeys.swift */; };
+		CE13708828A3FD42003252A8 /* AppleAlbums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13708728A3FD42003252A8 /* AppleAlbums.swift */; };
+		CE13708A28A40702003252A8 /* ApplePlayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13708928A40702003252A8 /* ApplePlayList.swift */; };
+		CE13708C28A40F54003252A8 /* AppleArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13708B28A40F54003252A8 /* AppleArtist.swift */; };
+		CE13708E28A4188A003252A8 /* AppleTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13708D28A4188A003252A8 /* AppleTrack.swift */; };
+		CE13709628A4CDAF003252A8 /* ApplePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13709528A4CDAF003252A8 /* ApplePlayer.swift */; };
 		CE1EB102289D50B900E10CB1 /* AlgorithmConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EB101289D50B900E10CB1 /* AlgorithmConsts.swift */; };
 		CE1EB104289D7D7700E10CB1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EB103289D7D7700E10CB1 /* Utilities.swift */; };
 		CE1EB107289EF0CB00E10CB1 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EB106289EF0CB00E10CB1 /* BLEManager.swift */; };
@@ -49,12 +60,7 @@
 		CE304AB82891C8E20079509D /* EarEffectCoreAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE304AB72891C8E20079509D /* EarEffectCoreAudioController.swift */; };
 		CE35398128A10D2E0085E9E3 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE35398028A10D2E0085E9E3 /* GoogleSignInSwift */; };
 		CE35398328A11CFF0085E9E3 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35398228A11CFF0085E9E3 /* LoginUser.swift */; };
-		CE353A2028A13C1E0085E9E3 /* DemoLimiter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3539DC28A13C1D0085E9E3 /* DemoLimiter.cpp */; };
-		CE353A2128A13C1E0085E9E3 /* MidSide.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3539E028A13C1D0085E9E3 /* MidSide.cpp */; };
-		CE353A2228A13C1E0085E9E3 /* Compressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3539E528A13C1D0085E9E3 /* Compressor.cpp */; };
-		CE353A2328A13C1E0085E9E3 /* DemoEQ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3539F628A13C1D0085E9E3 /* DemoEQ.cpp */; };
-		CE353A2428A13C1E0085E9E3 /* IIRFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3539F928A13C1D0085E9E3 /* IIRFilter.cpp */; };
-		CE353A2828A13C1E0085E9E3 /* DemoCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE353A1428A13C1E0085E9E3 /* DemoCompressor.cpp */; };
+		CE353A2E28A2B7610085E9E3 /* AppleMusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE353A2D28A2B7610085E9E3 /* AppleMusicManager.swift */; };
 		CE36F6F4287CB23400560E3F /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE36F6F3287CB23400560E3F /* IQKeyboardManagerSwift */; };
 		CE36F6F7287CB3A400560E3F /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36F6F6287CB3A400560E3F /* Navigation.swift */; };
 		CE36F6F9287CC57100560E3F /* RegisteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE36F6F8287CC57100560E3F /* RegisteredViewController.swift */; };
@@ -89,6 +95,11 @@
 		CE6FA8BB288A780500652484 /* SupportedDevices.json in Resources */ = {isa = PBXBuildFile; fileRef = CE6FA8BA288A780500652484 /* SupportedDevices.json */; };
 		CE6FAC1F288ACD6F00652484 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FAC1E288ACD6F00652484 /* PlayerViewController.swift */; };
 		CE6FAC21288B35E700652484 /* SpotifyPlayBackTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FAC20288B35E700652484 /* SpotifyPlayBackTrack.swift */; };
+		CE79407128A944BD007E2B7C /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = CE79407028A944BD007E2B7C /* FacebookLogin */; };
+		CE79493128B2838A00BB27D9 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79493028B2838A00BB27D9 /* ApiManager.swift */; };
+		CE79493328B29B9C00BB27D9 /* ApisModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79493228B29B9C00BB27D9 /* ApisModels.swift */; };
+		CE79493528B2A0C700BB27D9 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE79493428B2A0C700BB27D9 /* String.swift */; };
+		CE79493B28B2AFF300BB27D9 /* IHProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = CE79493A28B2AFF300BB27D9 /* IHProgressHUD */; };
 		CE7C7326288C870B002C6A07 /* AvailableDevicesCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C7325288C870B002C6A07 /* AvailableDevicesCategoryViewController.swift */; };
 		CE7C7328288C87BC002C6A07 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C7327288C87BC002C6A07 /* Device.swift */; };
 		CE7C7332288CB77D002C6A07 /* PushNotificationSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C7331288CB77D002C6A07 /* PushNotificationSettingsViewController.swift */; };
@@ -121,6 +132,16 @@
 		CEA8F12F287DF4EF00CE9EBE /* AvailableDeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8F12E287DF4EF00CE9EBE /* AvailableDeviceListViewController.swift */; };
 		CEA8F131287DFD4C00CE9EBE /* DeviceListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8F130287DFD4C00CE9EBE /* DeviceListTableViewCell.swift */; };
 		CEA8F134287E074100CE9EBE /* BLEConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8F133287E074100CE9EBE /* BLEConnectionViewController.swift */; };
+		CEB0000D28B0347600827B28 /* CPP-Wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEB0000B28B0347600827B28 /* CPP-Wrapper.mm */; };
+		CEB0FF7428AE50E200827B28 /* Coefficients.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEB0FF4E28AE50E200827B28 /* Coefficients.cpp */; };
+		CEB0FF7528AE50E200827B28 /* IIRFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEB0FF4F28AE50E200827B28 /* IIRFilter.cpp */; };
+		CEB0FF7628AE50E200827B28 /* MidSide.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEB0FF5028AE50E200827B28 /* MidSide.cpp */; };
+		CEB0FF7728AE50E200827B28 /* ArrayCoefficients.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEB0FF5628AE50E200827B28 /* ArrayCoefficients.cpp */; };
+		CEB0FF7828AE50E200827B28 /* Compressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEB0FF5828AE50E200827B28 /* Compressor.cpp */; };
+		CEB0FF7928AE50E200827B28 /* DemoCompressor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEB0FF6A28AE50E200827B28 /* DemoCompressor.cpp */; };
+		CEB0FF7A28AE50E200827B28 /* DemoLimiter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEB0FF6B28AE50E200827B28 /* DemoLimiter.cpp */; };
+		CEB0FF7B28AE50E200827B28 /* DemoBoom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEB0FF6D28AE50E200827B28 /* DemoBoom.cpp */; };
+		CEB0FF7C28AE50E200827B28 /* DemoEQ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEB0FF6E28AE50E200827B28 /* DemoEQ.cpp */; };
 		CEDAA93228808D6E008EA1F0 /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAA93128808D6E008EA1F0 /* VerticalSlider.swift */; };
 		CEDAA934288098DB008EA1F0 /* DotedStragintLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAA933288098DB008EA1F0 /* DotedStragintLine.swift */; };
 		CEDAA9362880A2EF008EA1F0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDAA9352880A2EF008EA1F0 /* SettingsViewController.swift */; };
@@ -143,6 +164,17 @@
 		CE10BC90287F3A9D00B0548F /* SoundControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundControlViewController.swift; sourceTree = "<group>"; };
 		CE10BC95287F4B5100B0548F /* RoundBlackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBlackView.swift; sourceTree = "<group>"; };
 		CE10BC97287F566A00B0548F /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		CE13707B28A3C09F003252A8 /* AppleMusicConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicConstants.swift; sourceTree = "<group>"; };
+		CE13707D28A3DE3A003252A8 /* AppleMusicApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicApiCaller.swift; sourceTree = "<group>"; };
+		CE13707F28A3ED14003252A8 /* MediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
+		CE13708028A3ED14003252A8 /* SerializationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializationError.swift; sourceTree = "<group>"; };
+		CE13708128A3ED15003252A8 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		CE13708528A3ED2C003252A8 /* JSONKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONKeys.swift; sourceTree = "<group>"; };
+		CE13708728A3FD42003252A8 /* AppleAlbums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAlbums.swift; sourceTree = "<group>"; };
+		CE13708928A40702003252A8 /* ApplePlayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePlayList.swift; sourceTree = "<group>"; };
+		CE13708B28A40F54003252A8 /* AppleArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleArtist.swift; sourceTree = "<group>"; };
+		CE13708D28A4188A003252A8 /* AppleTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleTrack.swift; sourceTree = "<group>"; };
+		CE13709528A4CDAF003252A8 /* ApplePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePlayer.swift; sourceTree = "<group>"; };
 		CE1EB101289D50B900E10CB1 /* AlgorithmConsts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmConsts.swift; sourceTree = "<group>"; };
 		CE1EB103289D7D7700E10CB1 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		CE1EB106289EF0CB00E10CB1 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
@@ -173,35 +205,7 @@
 		CE304AB72891C8E20079509D /* EarEffectCoreAudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarEffectCoreAudioController.swift; sourceTree = "<group>"; };
 		CE35397E28A106700085E9E3 /* EarEffect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EarEffect.entitlements; sourceTree = "<group>"; };
 		CE35398228A11CFF0085E9E3 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
-		CE3539DA28A13C1D0085E9E3 /* span.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = span.hpp; sourceTree = "<group>"; };
-		CE3539DC28A13C1D0085E9E3 /* DemoLimiter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DemoLimiter.cpp; sourceTree = "<group>"; };
-		CE3539DD28A13C1D0085E9E3 /* DemoLimiter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DemoLimiter.hpp; sourceTree = "<group>"; };
-		CE3539DF28A13C1D0085E9E3 /* LinearSmoothed.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinearSmoothed.hpp; sourceTree = "<group>"; };
-		CE3539E028A13C1D0085E9E3 /* MidSide.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MidSide.cpp; sourceTree = "<group>"; };
-		CE3539E128A13C1D0085E9E3 /* JuceCompressor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = JuceCompressor.hpp; sourceTree = "<group>"; };
-		CE3539E228A13C1D0085E9E3 /* BallisticsFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BallisticsFilter.hpp; sourceTree = "<group>"; };
-		CE3539E328A13C1D0085E9E3 /* Decibels.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Decibels.hpp; sourceTree = "<group>"; };
-		CE3539E428A13C1D0085E9E3 /* AudioBuffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AudioBuffer.hpp; sourceTree = "<group>"; };
-		CE3539E528A13C1D0085E9E3 /* Compressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Compressor.cpp; sourceTree = "<group>"; };
-		CE3539E628A13C1D0085E9E3 /* JuceLimiter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = JuceLimiter.hpp; sourceTree = "<group>"; };
-		CE3539E728A13C1D0085E9E3 /* SoftClipper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SoftClipper.hpp; sourceTree = "<group>"; };
-		CE3539E828A13C1D0085E9E3 /* Limiter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Limiter.hpp; sourceTree = "<group>"; };
-		CE3539E928A13C1D0085E9E3 /* MidSideCompressor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MidSideCompressor.hpp; sourceTree = "<group>"; };
-		CE3539EA28A13C1D0085E9E3 /* Compressor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Compressor.hpp; sourceTree = "<group>"; };
-		CE3539EB28A13C1D0085E9E3 /* StateVariableFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StateVariableFilter.hpp; sourceTree = "<group>"; };
-		CE3539EC28A13C1D0085E9E3 /* MidSide.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MidSide.hpp; sourceTree = "<group>"; };
-		CE3539ED28A13C1D0085E9E3 /* ProcessSpec.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ProcessSpec.hpp; sourceTree = "<group>"; };
-		CE3539F328A13C1D0085E9E3 /* mdspan.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = mdspan.hpp; sourceTree = "<group>"; };
-		CE3539F528A13C1D0085E9E3 /* DemoEQ.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DemoEQ.hpp; sourceTree = "<group>"; };
-		CE3539F628A13C1D0085E9E3 /* DemoEQ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DemoEQ.cpp; sourceTree = "<group>"; };
-		CE3539F928A13C1D0085E9E3 /* IIRFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IIRFilter.cpp; sourceTree = "<group>"; };
-		CE353A0028A13C1D0085E9E3 /* MathConstants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MathConstants.hpp; sourceTree = "<group>"; };
-		CE353A0528A13C1D0085E9E3 /* Filter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Filter.hpp; sourceTree = "<group>"; };
-		CE353A0728A13C1D0085E9E3 /* FilterType.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FilterType.hpp; sourceTree = "<group>"; };
-		CE353A0928A13C1D0085E9E3 /* IIRFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IIRFilter.hpp; sourceTree = "<group>"; };
-		CE353A0B28A13C1E0085E9E3 /* Equalizer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Equalizer.hpp; sourceTree = "<group>"; };
-		CE353A1428A13C1E0085E9E3 /* DemoCompressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DemoCompressor.cpp; sourceTree = "<group>"; };
-		CE353A1528A13C1E0085E9E3 /* DemoCompressor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DemoCompressor.hpp; sourceTree = "<group>"; };
+		CE353A2D28A2B7610085E9E3 /* AppleMusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicManager.swift; sourceTree = "<group>"; };
 		CE36F6F6287CB3A400560E3F /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		CE36F6F8287CC57100560E3F /* RegisteredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredViewController.swift; sourceTree = "<group>"; };
 		CE36F6FA287CC5DE00560E3F /* DeRegisterationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeRegisterationViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +240,9 @@
 		CE6FA8BA288A780500652484 /* SupportedDevices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SupportedDevices.json; sourceTree = "<group>"; };
 		CE6FAC1E288ACD6F00652484 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		CE6FAC20288B35E700652484 /* SpotifyPlayBackTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyPlayBackTrack.swift; sourceTree = "<group>"; };
+		CE79493028B2838A00BB27D9 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		CE79493228B29B9C00BB27D9 /* ApisModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApisModels.swift; sourceTree = "<group>"; };
+		CE79493428B2A0C700BB27D9 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CE7C7325288C870B002C6A07 /* AvailableDevicesCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDevicesCategoryViewController.swift; sourceTree = "<group>"; };
 		CE7C7327288C87BC002C6A07 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		CE7C7331288CB77D002C6A07 /* PushNotificationSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationSettingsViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +275,45 @@
 		CEA8F12E287DF4EF00CE9EBE /* AvailableDeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDeviceListViewController.swift; sourceTree = "<group>"; };
 		CEA8F130287DFD4C00CE9EBE /* DeviceListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewCell.swift; sourceTree = "<group>"; };
 		CEA8F133287E074100CE9EBE /* BLEConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEConnectionViewController.swift; sourceTree = "<group>"; };
+		CEB0000B28B0347600827B28 /* CPP-Wrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "CPP-Wrapper.mm"; sourceTree = "<group>"; };
+		CEB0000C28B0347600827B28 /* CPP-Wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CPP-Wrapper.h"; sourceTree = "<group>"; };
+		CEB0FF4D28AE50E200827B28 /* LinearSmoothed.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LinearSmoothed.hpp; sourceTree = "<group>"; };
+		CEB0FF4E28AE50E200827B28 /* Coefficients.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Coefficients.cpp; sourceTree = "<group>"; };
+		CEB0FF4F28AE50E200827B28 /* IIRFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IIRFilter.cpp; sourceTree = "<group>"; };
+		CEB0FF5028AE50E200827B28 /* MidSide.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MidSide.cpp; sourceTree = "<group>"; };
+		CEB0FF5128AE50E200827B28 /* JuceCompressor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = JuceCompressor.hpp; sourceTree = "<group>"; };
+		CEB0FF5228AE50E200827B28 /* Boom.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Boom.hpp; sourceTree = "<group>"; };
+		CEB0FF5328AE50E200827B28 /* BallisticsFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BallisticsFilter.hpp; sourceTree = "<group>"; };
+		CEB0FF5428AE50E200827B28 /* DoubleStateVariableFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DoubleStateVariableFilter.hpp; sourceTree = "<group>"; };
+		CEB0FF5528AE50E200827B28 /* Decibels.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Decibels.hpp; sourceTree = "<group>"; };
+		CEB0FF5628AE50E200827B28 /* ArrayCoefficients.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayCoefficients.cpp; sourceTree = "<group>"; };
+		CEB0FF5728AE50E200827B28 /* AudioBuffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AudioBuffer.hpp; sourceTree = "<group>"; };
+		CEB0FF5828AE50E200827B28 /* Compressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Compressor.cpp; sourceTree = "<group>"; };
+		CEB0FF5928AE50E200827B28 /* MathConstants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MathConstants.hpp; sourceTree = "<group>"; };
+		CEB0FF5A28AE50E200827B28 /* JuceLimiter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = JuceLimiter.hpp; sourceTree = "<group>"; };
+		CEB0FF5B28AE50E200827B28 /* SoftClipper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SoftClipper.hpp; sourceTree = "<group>"; };
+		CEB0FF5C28AE50E200827B28 /* ArrayCoefficients.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ArrayCoefficients.hpp; sourceTree = "<group>"; };
+		CEB0FF5D28AE50E200827B28 /* Limiter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Limiter.hpp; sourceTree = "<group>"; };
+		CEB0FF5E28AE50E200827B28 /* MidSideCompressor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MidSideCompressor.hpp; sourceTree = "<group>"; };
+		CEB0FF5F28AE50E200827B28 /* Filter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Filter.hpp; sourceTree = "<group>"; };
+		CEB0FF6028AE50E200827B28 /* Compressor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Compressor.hpp; sourceTree = "<group>"; };
+		CEB0FF6128AE50E200827B28 /* FilterType.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FilterType.hpp; sourceTree = "<group>"; };
+		CEB0FF6228AE50E200827B28 /* Coefficients.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Coefficients.hpp; sourceTree = "<group>"; };
+		CEB0FF6328AE50E200827B28 /* StateVariableFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StateVariableFilter.hpp; sourceTree = "<group>"; };
+		CEB0FF6428AE50E200827B28 /* IIRFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = IIRFilter.hpp; sourceTree = "<group>"; };
+		CEB0FF6528AE50E200827B28 /* MidSide.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MidSide.hpp; sourceTree = "<group>"; };
+		CEB0FF6628AE50E200827B28 /* Equalizer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Equalizer.hpp; sourceTree = "<group>"; };
+		CEB0FF6728AE50E200827B28 /* ProcessSpec.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ProcessSpec.hpp; sourceTree = "<group>"; };
+		CEB0FF6828AE50E200827B28 /* ProcessorDuplicator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ProcessorDuplicator.hpp; sourceTree = "<group>"; };
+		CEB0FF6A28AE50E200827B28 /* DemoCompressor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DemoCompressor.cpp; sourceTree = "<group>"; };
+		CEB0FF6B28AE50E200827B28 /* DemoLimiter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DemoLimiter.cpp; sourceTree = "<group>"; };
+		CEB0FF6C28AE50E200827B28 /* DemoEQ.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DemoEQ.hpp; sourceTree = "<group>"; };
+		CEB0FF6D28AE50E200827B28 /* DemoBoom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DemoBoom.cpp; sourceTree = "<group>"; };
+		CEB0FF6E28AE50E200827B28 /* DemoEQ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DemoEQ.cpp; sourceTree = "<group>"; };
+		CEB0FF6F28AE50E200827B28 /* DemoBoom.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DemoBoom.hpp; sourceTree = "<group>"; };
+		CEB0FF7028AE50E200827B28 /* DemoCompressor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DemoCompressor.hpp; sourceTree = "<group>"; };
+		CEB0FF7128AE50E200827B28 /* DemoLimiter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DemoLimiter.hpp; sourceTree = "<group>"; };
+		CEB0FF7328AE50E200827B28 /* span.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = span.hpp; sourceTree = "<group>"; };
 		CEDAA93128808D6E008EA1F0 /* VerticalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
 		CEDAA933288098DB008EA1F0 /* DotedStragintLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotedStragintLine.swift; sourceTree = "<group>"; };
 		CEDAA9352880A2EF008EA1F0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -285,6 +331,8 @@
 				CE970B0828882ABA00678997 /* SpotifyMetadata.framework in Frameworks */,
 				CE5617F62886045A00326418 /* Kingfisher in Frameworks */,
 				CE36F6F4287CB23400560E3F /* IQKeyboardManagerSwift in Frameworks */,
+				CE79407128A944BD007E2B7C /* FacebookLogin in Frameworks */,
+				CE79493B28B2AFF300BB27D9 /* IHProgressHUD in Frameworks */,
 				CE970B0928882ABA00678997 /* SpotifyAudioPlayback.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,8 +357,10 @@
 		CE04B4832884908300474204 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				CE353A2C28A2B7490085E9E3 /* AppleMusic */,
 				CEF235BF288731EB008368E1 /* SpotifySDK */,
 				CE1EB103289D7D7700E10CB1 /* Utilities.swift */,
+				CE79493028B2838A00BB27D9 /* ApiManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -332,6 +382,15 @@
 				CE2BD1D2288EBABE0027AB6B /* SpotifyArtistTopTracks.swift */,
 				CE1EB101289D50B900E10CB1 /* AlgorithmConsts.swift */,
 				CE35398228A11CFF0085E9E3 /* LoginUser.swift */,
+				CE13708128A3ED15003252A8 /* Artwork.swift */,
+				CE13707F28A3ED14003252A8 /* MediaItem.swift */,
+				CE13708028A3ED14003252A8 /* SerializationError.swift */,
+				CE13708528A3ED2C003252A8 /* JSONKeys.swift */,
+				CE13708728A3FD42003252A8 /* AppleAlbums.swift */,
+				CE13708928A40702003252A8 /* ApplePlayList.swift */,
+				CE13708B28A40F54003252A8 /* AppleArtist.swift */,
+				CE13708D28A4188A003252A8 /* AppleTrack.swift */,
+				CE79493228B29B9C00BB27D9 /* ApisModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -402,157 +461,22 @@
 		CE3539D328A13C1D0085E9E3 /* JuceLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				CE353A2A28A13FF40085E9E3 /* dsp */,
-				CE3539D528A13C1D0085E9E3 /* AMDemoLimiter */,
-				CE3539EE28A13C1D0085E9E3 /* AMDemoEQ */,
-				CE353A0D28A13C1E0085E9E3 /* AMDemoCompressor */,
+				CEB0FF7228AE50E200827B28 /* core */,
+				CEB0FF4C28AE50E200827B28 /* dsp */,
+				CEB0FF6928AE50E200827B28 /* fx */,
 			);
 			path = JuceLibrary;
 			sourceTree = "<group>";
 		};
-		CE3539D528A13C1D0085E9E3 /* AMDemoLimiter */ = {
+		CE353A2C28A2B7490085E9E3 /* AppleMusic */ = {
 			isa = PBXGroup;
 			children = (
-				CE3539D628A13C1D0085E9E3 /* lib */,
+				CE353A2D28A2B7610085E9E3 /* AppleMusicManager.swift */,
+				CE13707B28A3C09F003252A8 /* AppleMusicConstants.swift */,
+				CE13707D28A3DE3A003252A8 /* AppleMusicApiCaller.swift */,
+				CE13709528A4CDAF003252A8 /* ApplePlayer.swift */,
 			);
-			path = AMDemoLimiter;
-			sourceTree = "<group>";
-		};
-		CE3539D628A13C1D0085E9E3 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				CE3539D828A13C1D0085E9E3 /* am */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		CE3539D828A13C1D0085E9E3 /* am */ = {
-			isa = PBXGroup;
-			children = (
-				CE3539DB28A13C1D0085E9E3 /* fx */,
-			);
-			path = am;
-			sourceTree = "<group>";
-		};
-		CE3539DB28A13C1D0085E9E3 /* fx */ = {
-			isa = PBXGroup;
-			children = (
-				CE3539DC28A13C1D0085E9E3 /* DemoLimiter.cpp */,
-				CE3539DD28A13C1D0085E9E3 /* DemoLimiter.hpp */,
-			);
-			path = fx;
-			sourceTree = "<group>";
-		};
-		CE3539EE28A13C1D0085E9E3 /* AMDemoEQ */ = {
-			isa = PBXGroup;
-			children = (
-				CE3539EF28A13C1D0085E9E3 /* lib */,
-			);
-			path = AMDemoEQ;
-			sourceTree = "<group>";
-		};
-		CE3539EF28A13C1D0085E9E3 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				CE3539F028A13C1D0085E9E3 /* am */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		CE3539F028A13C1D0085E9E3 /* am */ = {
-			isa = PBXGroup;
-			children = (
-				CE3539F128A13C1D0085E9E3 /* core */,
-				CE3539F428A13C1D0085E9E3 /* fx */,
-				CE3539F728A13C1D0085E9E3 /* dsp */,
-			);
-			path = am;
-			sourceTree = "<group>";
-		};
-		CE3539F128A13C1D0085E9E3 /* core */ = {
-			isa = PBXGroup;
-			children = (
-				CE3539F328A13C1D0085E9E3 /* mdspan.hpp */,
-			);
-			path = core;
-			sourceTree = "<group>";
-		};
-		CE3539F428A13C1D0085E9E3 /* fx */ = {
-			isa = PBXGroup;
-			children = (
-				CE3539F528A13C1D0085E9E3 /* DemoEQ.hpp */,
-				CE3539F628A13C1D0085E9E3 /* DemoEQ.cpp */,
-			);
-			path = fx;
-			sourceTree = "<group>";
-		};
-		CE3539F728A13C1D0085E9E3 /* dsp */ = {
-			isa = PBXGroup;
-			children = (
-				CE3539F928A13C1D0085E9E3 /* IIRFilter.cpp */,
-				CE353A0028A13C1D0085E9E3 /* MathConstants.hpp */,
-				CE353A0528A13C1D0085E9E3 /* Filter.hpp */,
-				CE353A0728A13C1D0085E9E3 /* FilterType.hpp */,
-				CE353A0928A13C1D0085E9E3 /* IIRFilter.hpp */,
-				CE353A0B28A13C1E0085E9E3 /* Equalizer.hpp */,
-			);
-			path = dsp;
-			sourceTree = "<group>";
-		};
-		CE353A0D28A13C1E0085E9E3 /* AMDemoCompressor */ = {
-			isa = PBXGroup;
-			children = (
-				CE353A0E28A13C1E0085E9E3 /* lib */,
-			);
-			path = AMDemoCompressor;
-			sourceTree = "<group>";
-		};
-		CE353A0E28A13C1E0085E9E3 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				CE353A1028A13C1E0085E9E3 /* am */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		CE353A1028A13C1E0085E9E3 /* am */ = {
-			isa = PBXGroup;
-			children = (
-				CE353A1328A13C1E0085E9E3 /* fx */,
-			);
-			path = am;
-			sourceTree = "<group>";
-		};
-		CE353A1328A13C1E0085E9E3 /* fx */ = {
-			isa = PBXGroup;
-			children = (
-				CE353A1428A13C1E0085E9E3 /* DemoCompressor.cpp */,
-				CE353A1528A13C1E0085E9E3 /* DemoCompressor.hpp */,
-			);
-			path = fx;
-			sourceTree = "<group>";
-		};
-		CE353A2A28A13FF40085E9E3 /* dsp */ = {
-			isa = PBXGroup;
-			children = (
-				CE3539DA28A13C1D0085E9E3 /* span.hpp */,
-				CE3539DF28A13C1D0085E9E3 /* LinearSmoothed.hpp */,
-				CE3539E028A13C1D0085E9E3 /* MidSide.cpp */,
-				CE3539EC28A13C1D0085E9E3 /* MidSide.hpp */,
-				CE3539E928A13C1D0085E9E3 /* MidSideCompressor.hpp */,
-				CE3539E128A13C1D0085E9E3 /* JuceCompressor.hpp */,
-				CE3539E228A13C1D0085E9E3 /* BallisticsFilter.hpp */,
-				CE3539E328A13C1D0085E9E3 /* Decibels.hpp */,
-				CE3539E428A13C1D0085E9E3 /* AudioBuffer.hpp */,
-				CE3539E528A13C1D0085E9E3 /* Compressor.cpp */,
-				CE3539EA28A13C1D0085E9E3 /* Compressor.hpp */,
-				CE3539E628A13C1D0085E9E3 /* JuceLimiter.hpp */,
-				CE3539E728A13C1D0085E9E3 /* SoftClipper.hpp */,
-				CE3539E828A13C1D0085E9E3 /* Limiter.hpp */,
-				CE3539EB28A13C1D0085E9E3 /* StateVariableFilter.hpp */,
-				CE3539ED28A13C1D0085E9E3 /* ProcessSpec.hpp */,
-			);
-			path = dsp;
+			path = AppleMusic;
 			sourceTree = "<group>";
 		};
 		CE36F6F5287CB38300560E3F /* Extensions */ = {
@@ -562,6 +486,7 @@
 				CEA4AEFD287E0C4E00C10450 /* UIColor+hex.swift */,
 				CE2E9EE828832C9A003634D2 /* UIButton.swift */,
 				CE04B4772883551D00474204 /* UIView.swift */,
+				CE79493428B2A0C700BB27D9 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -613,6 +538,8 @@
 				CE04B4792883640900474204 /* Controls Screens */,
 				CE7C7324288C8600002C6A07 /* SettingView */,
 				CE04B47E288445A900474204 /* EarEffect-Bridging-Header.h */,
+				CEB0000C28B0347600827B28 /* CPP-Wrapper.h */,
+				CEB0000B28B0347600827B28 /* CPP-Wrapper.mm */,
 				CE2E57CB2886BC46002B8310 /* Music Source Controllers */,
 			);
 			path = EarEffect;
@@ -726,6 +653,64 @@
 			path = "Login-Member";
 			sourceTree = "<group>";
 		};
+		CEB0FF4C28AE50E200827B28 /* dsp */ = {
+			isa = PBXGroup;
+			children = (
+				CEB0FF4D28AE50E200827B28 /* LinearSmoothed.hpp */,
+				CEB0FF4E28AE50E200827B28 /* Coefficients.cpp */,
+				CEB0FF4F28AE50E200827B28 /* IIRFilter.cpp */,
+				CEB0FF5028AE50E200827B28 /* MidSide.cpp */,
+				CEB0FF5128AE50E200827B28 /* JuceCompressor.hpp */,
+				CEB0FF5228AE50E200827B28 /* Boom.hpp */,
+				CEB0FF5328AE50E200827B28 /* BallisticsFilter.hpp */,
+				CEB0FF5428AE50E200827B28 /* DoubleStateVariableFilter.hpp */,
+				CEB0FF5528AE50E200827B28 /* Decibels.hpp */,
+				CEB0FF5628AE50E200827B28 /* ArrayCoefficients.cpp */,
+				CEB0FF5728AE50E200827B28 /* AudioBuffer.hpp */,
+				CEB0FF5828AE50E200827B28 /* Compressor.cpp */,
+				CEB0FF5928AE50E200827B28 /* MathConstants.hpp */,
+				CEB0FF5A28AE50E200827B28 /* JuceLimiter.hpp */,
+				CEB0FF5B28AE50E200827B28 /* SoftClipper.hpp */,
+				CEB0FF5C28AE50E200827B28 /* ArrayCoefficients.hpp */,
+				CEB0FF5D28AE50E200827B28 /* Limiter.hpp */,
+				CEB0FF5E28AE50E200827B28 /* MidSideCompressor.hpp */,
+				CEB0FF5F28AE50E200827B28 /* Filter.hpp */,
+				CEB0FF6028AE50E200827B28 /* Compressor.hpp */,
+				CEB0FF6128AE50E200827B28 /* FilterType.hpp */,
+				CEB0FF6228AE50E200827B28 /* Coefficients.hpp */,
+				CEB0FF6328AE50E200827B28 /* StateVariableFilter.hpp */,
+				CEB0FF6428AE50E200827B28 /* IIRFilter.hpp */,
+				CEB0FF6528AE50E200827B28 /* MidSide.hpp */,
+				CEB0FF6628AE50E200827B28 /* Equalizer.hpp */,
+				CEB0FF6728AE50E200827B28 /* ProcessSpec.hpp */,
+				CEB0FF6828AE50E200827B28 /* ProcessorDuplicator.hpp */,
+			);
+			path = dsp;
+			sourceTree = "<group>";
+		};
+		CEB0FF6928AE50E200827B28 /* fx */ = {
+			isa = PBXGroup;
+			children = (
+				CEB0FF6C28AE50E200827B28 /* DemoEQ.hpp */,
+				CEB0FF6E28AE50E200827B28 /* DemoEQ.cpp */,
+				CEB0FF6F28AE50E200827B28 /* DemoBoom.hpp */,
+				CEB0FF6D28AE50E200827B28 /* DemoBoom.cpp */,
+				CEB0FF7028AE50E200827B28 /* DemoCompressor.hpp */,
+				CEB0FF6A28AE50E200827B28 /* DemoCompressor.cpp */,
+				CEB0FF7128AE50E200827B28 /* DemoLimiter.hpp */,
+				CEB0FF6B28AE50E200827B28 /* DemoLimiter.cpp */,
+			);
+			path = fx;
+			sourceTree = "<group>";
+		};
+		CEB0FF7228AE50E200827B28 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				CEB0FF7328AE50E200827B28 /* span.hpp */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
 		CEF235BF288731EB008368E1 /* SpotifySDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -758,6 +743,8 @@
 				CE36F6F3287CB23400560E3F /* IQKeyboardManagerSwift */,
 				CE5617F52886045A00326418 /* Kingfisher */,
 				CE35398028A10D2E0085E9E3 /* GoogleSignInSwift */,
+				CE79407028A944BD007E2B7C /* FacebookLogin */,
+				CE79493A28B2AFF300BB27D9 /* IHProgressHUD */,
 			);
 			productName = EarEffect;
 			productReference = CE3E9F7A287C69E8000ED140 /* EarEffect.app */;
@@ -792,6 +779,8 @@
 				CE36F6F2287CB23400560E3F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				CE5617F42886045A00326418 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				CE35397F28A10D2E0085E9E3 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				CE79406F28A944BD007E2B7C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				CE79493928B2AFF300BB27D9 /* XCRemoteSwiftPackageReference "IHProgressHUD" */,
 			);
 			productRefGroup = CE3E9F7B287C69E8000ED140 /* Products */;
 			projectDirPath = "";
@@ -834,21 +823,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE984A6E2885B3F600481E02 /* AlbumsViewController.swift in Sources */,
-				CE353A2128A13C1E0085E9E3 /* MidSide.cpp in Sources */,
 				CE7C7334288D1DE6002C6A07 /* LoginInformationViewController.swift in Sources */,
+				CE13708328A3ED15003252A8 /* SerializationError.swift in Sources */,
 				CE36F6F9287CC57100560E3F /* RegisteredViewController.swift in Sources */,
 				CE10BC91287F3A9D00B0548F /* SoundControlViewController.swift in Sources */,
 				CE2E9EE128820290003634D2 /* AutoModeViewController.swift in Sources */,
-				CE353A2328A13C1E0085E9E3 /* DemoEQ.cpp in Sources */,
 				CE2E57E22886ECBE002B8310 /* AudioPlayerManager+URL.swift in Sources */,
 				CEDAA9362880A2EF008EA1F0 /* SettingsViewController.swift in Sources */,
 				CE3E9FB0287C8726000ED140 /* RegistrationViewController.swift in Sources */,
 				CEA8F129287DEE3B00CE9EBE /* StartTrialViewController.swift in Sources */,
 				CE2BD1CE288DD5770027AB6B /* MusicTableViewHeader.swift in Sources */,
 				CE3E9FAA287C718A000ED140 /* RoundButton.swift in Sources */,
-				CE353A2228A13C1E0085E9E3 /* Compressor.cpp in Sources */,
 				CEA8F12B287DEEF300CE9EBE /* SixtyMinutesPassedViewController.swift in Sources */,
 				CE2E57E02886EA5A002B8310 /* AVAsset+Metadata.swift in Sources */,
+				CEB0FF7828AE50E200827B28 /* Compressor.cpp in Sources */,
 				CE2E9EDF2881F610003634D2 /* ModeViewController.swift in Sources */,
 				CE2E57E62886ED23002B8310 /* AudioURLTrack+Metadata.swift in Sources */,
 				CE7C733A288D23B3002C6A07 /* CompanyInformationViewController.swift in Sources */,
@@ -860,11 +848,16 @@
 				CE2E9EE528821534003634D2 /* ModelsTableViewCell.swift in Sources */,
 				CE90FDE5288061F200ED04A1 /* Knob.swift in Sources */,
 				CE59B899287CA58B00403D8C /* GBFloatingTextField.swift in Sources */,
+				CE13708E28A4188A003252A8 /* AppleTrack.swift in Sources */,
+				CEB0FF7A28AE50E200827B28 /* DemoLimiter.cpp in Sources */,
+				CE13708C28A40F54003252A8 /* AppleArtist.swift in Sources */,
 				CE59B897287CA1CC00403D8C /* RegisterViewController.swift in Sources */,
 				CE10BC8D287F1AEF00B0548F /* BLEConnectedViewController.swift in Sources */,
 				CEDAA93A2880B086008EA1F0 /* CardPresentationController.swift in Sources */,
+				CE13707C28A3C09F003252A8 /* AppleMusicConstants.swift in Sources */,
 				CE04B48F28856CFE00474204 /* SpotifyAuthResponse.swift in Sources */,
 				CE2BD1C7288D68510027AB6B /* SpotifyUser.swift in Sources */,
+				CEB0FF7B28AE50E200827B28 /* DemoBoom.cpp in Sources */,
 				CE5617EF2885CEBE00326418 /* SpotifyAlbumDetailsResponse.swift in Sources */,
 				CE1EB104289D7D7700E10CB1 /* Utilities.swift in Sources */,
 				CE6FA8B92889E3F600652484 /* SpotifyPlayer.swift in Sources */,
@@ -873,8 +866,10 @@
 				CEA4AF01287E0C4E00C10450 /* UIColor+hex.swift in Sources */,
 				CE35398328A11CFF0085E9E3 /* LoginUser.swift in Sources */,
 				CE5617F12885D3A200326418 /* SpotifyPlayListDetailsResponse.swift in Sources */,
+				CE79493528B2A0C700BB27D9 /* String.swift in Sources */,
 				CE3E9F82287C69E8000ED140 /* ViewController.swift in Sources */,
 				CE6FAC1F288ACD6F00652484 /* PlayerViewController.swift in Sources */,
+				CEB0FF7728AE50E200827B28 /* ArrayCoefficients.cpp in Sources */,
 				CEA8F125287DEC6100CE9EBE /* BecomeMemberViewController.swift in Sources */,
 				CE7C7328288C87BC002C6A07 /* Device.swift in Sources */,
 				CE36F6FD287CC69100560E3F /* DeRegisteredViewController.swift in Sources */,
@@ -887,20 +882,24 @@
 				CEA4AF00287E0C4E00C10450 /* DotsLoadingView.swift in Sources */,
 				CE36F6FB287CC5DE00560E3F /* DeRegisterationViewController.swift in Sources */,
 				CEDAA9382880B068008EA1F0 /* PresentationController.swift in Sources */,
+				CEB0FF7428AE50E200827B28 /* Coefficients.cpp in Sources */,
 				CE36F6F7287CB3A400560E3F /* Navigation.swift in Sources */,
 				CE10BC98287F566A00B0548F /* BorderView.swift in Sources */,
 				CE7C7326288C870B002C6A07 /* AvailableDevicesCategoryViewController.swift in Sources */,
 				CE2BD1CC288DD5770027AB6B /* MusicDataTableViewCell.swift in Sources */,
 				CE2E9EEB28833767003634D2 /* AlgorithmViewController.swift in Sources */,
-				CE353A2828A13C1E0085E9E3 /* DemoCompressor.cpp in Sources */,
+				CE13708828A3FD42003252A8 /* AppleAlbums.swift in Sources */,
+				CE13708628A3ED2C003252A8 /* JSONKeys.swift in Sources */,
 				CEDAA934288098DB008EA1F0 /* DotedStragintLine.swift in Sources */,
 				CE1EB102289D50B900E10CB1 /* AlgorithmConsts.swift in Sources */,
 				CE2BD1D3288EBABE0027AB6B /* SpotifyArtistTopTracks.swift in Sources */,
 				CE304AB82891C8E20079509D /* EarEffectCoreAudioController.swift in Sources */,
+				CEB0FF7928AE50E200827B28 /* DemoCompressor.cpp in Sources */,
 				CE2E9EED28833CB5003634D2 /* HorizontalSlider.swift in Sources */,
 				CEA8F131287DFD4C00CE9EBE /* DeviceListTableViewCell.swift in Sources */,
 				CE7C7342288D50FD002C6A07 /* ConnectedDeviceViewController.swift in Sources */,
 				CEA4AEFF287E0C4E00C10450 /* DotView.swift in Sources */,
+				CEB0FF7628AE50E200827B28 /* MidSide.cpp in Sources */,
 				CEF235BC28873076008368E1 /* SpotifyConstants.swift in Sources */,
 				CE7C733E288D4776002C6A07 /* QAViewController.swift in Sources */,
 				CEDAA93228808D6E008EA1F0 /* VerticalSlider.swift in Sources */,
@@ -908,26 +907,35 @@
 				CE90FDE4288061F200ED04A1 /* DotedLines.swift in Sources */,
 				CE3E9F7E287C69E8000ED140 /* AppDelegate.swift in Sources */,
 				CE1EB107289EF0CB00E10CB1 /* BLEManager.swift in Sources */,
+				CEB0FF7C28AE50E200827B28 /* DemoEQ.cpp in Sources */,
+				CE13709628A4CDAF003252A8 /* ApplePlayer.swift in Sources */,
 				CE04B485288490A300474204 /* SpotifyAuthManager.swift in Sources */,
 				CE04B47B2883648C00474204 /* ConnectedStreamsViewController.swift in Sources */,
 				CE04B4782883551D00474204 /* UIView.swift in Sources */,
 				CEA8F134287E074100CE9EBE /* BLEConnectionViewController.swift in Sources */,
-				CE353A2028A13C1E0085E9E3 /* DemoLimiter.cpp in Sources */,
 				CE2E57E42886ECF8002B8310 /* AudioURLTrack.swift in Sources */,
 				CE5617EB2885C96E00326418 /* SpotifyPlayList.swift in Sources */,
+				CE13708A28A40702003252A8 /* ApplePlayList.swift in Sources */,
+				CEB0FF7528AE50E200827B28 /* IIRFilter.cpp in Sources */,
+				CE13708228A3ED15003252A8 /* MediaItem.swift in Sources */,
 				CE7C7340288D4943002C6A07 /* InstructionsViewController.swift in Sources */,
 				CE6FAC21288B35E700652484 /* SpotifyPlayBackTrack.swift in Sources */,
 				CE2E57C82886A548002B8310 /* GetAlbumSongsViewController.swift in Sources */,
 				CE7C7332288CB77D002C6A07 /* PushNotificationSettingsViewController.swift in Sources */,
 				CE2E9EE928832C9A003634D2 /* UIButton.swift in Sources */,
+				CE79493128B2838A00BB27D9 /* ApiManager.swift in Sources */,
 				CE2E57DC2886E9EF002B8310 /* AudioTrack.swift in Sources */,
 				CEA8F123287DCFE600CE9EBE /* LoginViewController.swift in Sources */,
 				CE5617ED2885CC1400326418 /* SpotifyArtist.swift in Sources */,
+				CEB0000D28B0347600827B28 /* CPP-Wrapper.mm in Sources */,
+				CE79493328B29B9C00BB27D9 /* ApisModels.swift in Sources */,
 				CE984A6C2885B1C100481E02 /* SpotifyAlbums.swift in Sources */,
 				CE984A692885A79500481E02 /* APICaller.swift in Sources */,
+				CE353A2E28A2B7610085E9E3 /* AppleMusicManager.swift in Sources */,
+				CE13707E28A3DE3A003252A8 /* AppleMusicApiCaller.swift in Sources */,
 				CEA8F12F287DF4EF00CE9EBE /* AvailableDeviceListViewController.swift in Sources */,
-				CE353A2428A13C1E0085E9E3 /* IIRFilter.cpp in Sources */,
 				CE984A672885A02D00481E02 /* ConnectedStreams.swift in Sources */,
+				CE13708428A3ED15003252A8 /* Artwork.swift in Sources */,
 				CE2E57D92886E986002B8310 /* AudioPlayerManager.swift in Sources */,
 				CE2E9EE3288214BF003634D2 /* ModelsViewController.swift in Sources */,
 				CE7C7336288D1F71002C6A07 /* AboutViewController.swift in Sources */,
@@ -1087,6 +1095,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EarEffect/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Application wants to access your Apple Music to play tracks";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Application need to access bluetooth to connect with Head Phone";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Application need to access bluetooth to connect with Head Phone";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1128,6 +1137,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EarEffect/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Application wants to access your Apple Music to play tracks";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Application need to access bluetooth to connect with Head Phone";
 				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Application need to access bluetooth to connect with Head Phone";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1200,6 +1210,22 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		CE79406F28A944BD007E2B7C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		CE79493928B2AFF300BB27D9 /* XCRemoteSwiftPackageReference "IHProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AsadAzam/IHProgressHUD.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1217,6 +1243,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE5617F42886045A00326418 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		CE79407028A944BD007E2B7C /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE79406F28A944BD007E2B7C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		CE79493A28B2AFF300BB27D9 /* IHProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE79493928B2AFF300BB27D9 /* XCRemoteSwiftPackageReference "IHProgressHUD" */;
+			productName = IHProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

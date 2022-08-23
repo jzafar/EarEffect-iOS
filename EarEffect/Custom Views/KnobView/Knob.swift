@@ -156,13 +156,13 @@ private class KnobRenderer {
     }
   }
 
-  var startAngle: CGFloat = CGFloat(-Double.pi) * 11 / 8 {
+  var startAngle: CGFloat = CGFloat(-Double.pi) * 11 / 9 {
     didSet {
       updateTrackLayerPath()
     }
   }
 
-  var endAngle: CGFloat = CGFloat(Double.pi) * 3 / 8 {
+  var endAngle: CGFloat = CGFloat(Double.pi) * 3 / 11 {
     didSet {
       updateTrackLayerPath()
     }
@@ -175,7 +175,7 @@ private class KnobRenderer {
     }
   }
 
-  private (set) var pointerAngle: CGFloat = CGFloat(-Double.pi) * 11 / 8
+  private (set) var pointerAngle: CGFloat = CGFloat(-Double.pi) * 11 / 9
 
   func setPointerAngle(_ newPointerAngle: CGFloat, animated: Bool = false) {
     CATransaction.begin()

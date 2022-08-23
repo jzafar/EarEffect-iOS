@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Kingfisher
 class RegisteredViewController: UIViewController {
 
     @IBOutlet weak var imgView: UIImageView!
@@ -19,18 +19,14 @@ class RegisteredViewController: UIViewController {
         if #available(iOS 14.0, *) {
             navigationItem.backButtonDisplayMode = .minimal
         }
-        // Do any additional setup after loading the view.
+        let userDefaults = UserDefaults.standard
+        do {
+            let device = try userDefaults.getObject(forKey: UserDefaults.registeredDevice, castTo: RegisterDevice.self)
+            print(device.name)
+            
+        } catch {
+            print(error.localizedDescription)
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

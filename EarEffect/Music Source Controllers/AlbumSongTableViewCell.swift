@@ -50,6 +50,17 @@ class AlbumSongTableViewCell: UITableViewCell {
             
         }
     }
+    
+    func setAppleSongData(track: AppleTrack){
+        lblSongTitle.text = track.attributes.name
+        if let artWork = track.attributes.artwork {
+            let imageUrl = artWork.imageURL(size: CGSize(width: 200, height: 200))
+            lblSongImage.kf.setImage(with: imageUrl, placeholder: UIImage(named: "placeholder"))
+        }
+        let time = TimeUtility.secondsToHoursMinutesSeconds(track.attributes.durationInMillis)
+        lblDuration.text = time
+        lblArtistNmae.text = track.attributes.artistName
+    }
 }
 
 extension Int {

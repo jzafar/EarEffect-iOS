@@ -43,9 +43,8 @@ class DotedLines: UIView {
   
   private func drawArc() {
           
-    let startAngle: CGFloat = CGFloat(-Double.pi) * 11 / 8
-
-    let endAngle: CGFloat = CGFloat(Double.pi) * 3 / 8
+      let startAngle: CGFloat = CGFloat(-Double.pi) * 11 / 9
+    let endAngle: CGFloat = CGFloat(Double.pi) * 3 / 11
     
     let path = UIBezierPath(arcCenter: CGPoint(x: self.frame.size.height/2, y: self.frame.size.height/2), radius: self.frame.size.height/2, startAngle: startAngle, endAngle: endAngle, clockwise: true)
           
@@ -53,8 +52,8 @@ class DotedLines: UIView {
           shapeLayer.path = path.cgPath
           shapeLayer.fillColor = UIColor.clear.cgColor
           shapeLayer.lineWidth = 5
-          shapeLayer.strokeColor = UIColor.lightGray.cgColor
-          shapeLayer.lineDashPattern = [2, 15]
+          shapeLayer.strokeColor =  UIColor.hexStr(hexStr: "777777", alpha: 1).cgColor
+          shapeLayer.lineDashPattern = [2, 8]
           self.layer.addSublayer(shapeLayer)
   }
 

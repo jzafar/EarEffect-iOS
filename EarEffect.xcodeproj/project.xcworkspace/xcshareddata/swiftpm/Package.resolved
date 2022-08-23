@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "facebook-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/facebook/facebook-ios-sdk.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "a1fad0dc8292ebd793ffe7ef73a77d401caa8929"
+      }
+    },
+    {
       "identity" : "googlesignin-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleSignIn-iOS",
@@ -34,6 +43,15 @@
       "state" : {
         "revision" : "b9d1683be336ba8c8d1c6867bafeb056a5399700",
         "version" : "1.3.0"
+      }
+    },
+    {
+      "identity" : "ihprogresshud",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AsadAzam/IHProgressHUD.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "16731a4662f780a135fe630874cb4d38c7fd9fe1"
       }
     },
     {

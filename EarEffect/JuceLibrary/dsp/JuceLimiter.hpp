@@ -5,7 +5,8 @@
 #include "LinearSmoothed.hpp"
 #include "ProcessSpec.hpp"
 
-namespace am {
+namespace am
+{
 
 template<typename SampleType>
 class JuceLimiter

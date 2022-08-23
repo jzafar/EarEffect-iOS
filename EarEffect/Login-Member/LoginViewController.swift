@@ -6,13 +6,17 @@
 //
 
 import AuthenticationServices
+import CryptoKit
+import FacebookLogin
+import FBSDKLoginKit
 import GoogleSignIn
+import IHProgressHUD
 import UIKit
 
 class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        btnFaceBook.permissions = ["public_profile", "email"]
         // Do any additional setup after loading the view.
     }
 
@@ -42,25 +46,62 @@ class LoginViewController: BaseViewController {
                 return
             }
             print("\(signInUser)")
+
             let user = LoginUser(name: signInUser.profile?.name ?? "", email: signInUser.profile?.email ?? "", id: signInUser.userID ?? "", type: .google)
-            user.saveUserInfo()
-            self?.performSegue(withIdentifier: "BecomeMemberViewController", sender: nil)
+            guard let userid = signInUser.userID else {
+                self?.showOkAlert(title: "Error", message: "Something went wrong try again")
+                return
+            }
+//            user.saveUserInfo()
+            IHProgressHUD.show()
+            let param = ["name": user.name,
+                         "email": user.email,
+                         "platform": "google",
+                         "user_id": userid] as [String: Any]
+            ApiManager.shared.login(params: param) {
+                IHProgressHUD.dismiss()
+                self?.goToNextScreen()
+            }
+        }
+    }
+
+    func goToNextScreen() {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "BecomeMemberViewController", sender: nil)
         }
     }
 
     @IBAction func loginWithFaceBook(_ sender: Any) {
-        performSegue(withIdentifier: "BecomeMemberViewController", sender: nil)
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: ["public_profile", "email"], from: self) { [weak self] result, error in
+            guard error == nil else {
+                self?.showOkAlert(title: "Error", message: "Something went wrong try again")
+                print(error!.localizedDescription)
+                return
+            }
+            guard let result = result, !result.isCancelled else {
+                print("User cancelled login")
+                return
+            }
+
+            guard let userid = result.token?.userID else {
+                self?.showOkAlert(title: "Error", message: "Something went wrong try again")
+                return
+            }
+
+            Profile.loadCurrentProfile { profile, error in
+                let param = ["name": profile?.name ?? "",
+                             "email": profile?.email ?? "",
+                             "platform": "facebook",
+                             "user_id": userid] as [String: Any]
+                IHProgressHUD.show()
+                ApiManager.shared.login(params: param) {
+                    IHProgressHUD.dismiss()
+                    self?.goToNextScreen()
+                }
+            }
+        }
     }
-
-    /*
-     // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-     }
-     */
 }
 
 extension LoginViewController: ASAuthorizationControllerDelegate {
@@ -75,8 +116,17 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
                 switch credentialState {
                 case .authorized:
                     DispatchQueue.main.async {
-                        let user = LoginUser(name: String(describing: fullName) , email: email ?? "", id: userIdentifier, type: .apple)
+                        let user = LoginUser(name: String(describing: fullName), email: email ?? "", id: userIdentifier, type: .apple)
                         user.saveUserInfo()
+                        let param = ["name": user.name,
+                                     "email": user.email,
+                                     "platform": "apple",
+                                     "user_id": userIdentifier] as [String: Any]
+                        IHProgressHUD.show()
+                        ApiManager.shared.login(params: param) {
+                            IHProgressHUD.dismiss()
+                            self.goToNextScreen()
+                        }
                         self.performSegue(withIdentifier: "BecomeMemberViewController", sender: nil)
                     }
                 case .revoked:

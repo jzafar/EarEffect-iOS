@@ -1,23 +1,17 @@
 #pragma once
 
 #include "AudioBuffer.hpp"
-#include "JuceLimiter.hpp"
-#include "Limiter.hpp"
+#include "Boom.hpp"
 
-namespace am::fx {
+namespace am::fx
+{
 
-class DemoLimiter
+class DemoBoom
 {
 public:
-    struct Parameter
-    {
-        int mode;
-        float threshold;
-        float ceiling;
-        float release;
-    };
+    using Parameter = am::Boom<float>::Parameter;
 
-    DemoLimiter() = default;
+    DemoBoom() = default;
 
     auto parameter(Parameter const& newParameter) -> void;
 
@@ -26,8 +20,8 @@ public:
     auto reset() -> void;
 
 private:
-    am::Limiter<float> _customLimiter{};
-    am::JuceLimiter<float> _juceLimiter{};
+    am::Boom<float> _boom{};
     Parameter _parameter{};
 };
+
 }  // namespace am::fx

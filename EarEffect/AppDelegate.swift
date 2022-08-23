@@ -9,6 +9,7 @@ import AVFoundation
 import IQKeyboardManagerSwift
 import UIKit
 import GoogleSignIn
+import FBSDKCoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,6 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if SpotifyAuthManager.shared.isSignedIn {
             SpotifyAuthManager.shared.refreshIfNeeded(completion: nil)
         }
+        // Init facebook sdk
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setCategory(AVAudioSession.Category.playback)

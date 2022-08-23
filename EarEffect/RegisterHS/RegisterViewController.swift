@@ -6,8 +6,8 @@
 //
 
 import UIKit
-
-class RegisterViewController: UIViewController {
+import IHProgressHUD
+class RegisterViewController: BaseViewController {
     @IBOutlet weak var txtFirstName: GBTextField!
     @IBOutlet weak var txtLastName: GBTextField!
     @IBOutlet weak var txtEmail: GBTextField!
@@ -25,8 +25,80 @@ class RegisterViewController: UIViewController {
         }
     }
     @IBAction func registerBtnPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "RegisteredViewController", sender: self)
+        guard let firstName = txtFirstName.text?.trimmingLeadingAndTrailingSpaces() else {
+            return
+        }
+        if (firstName.count == 0) {
+            showOkAlert(title: "Error", message: "Please enter First Name")
+            return
+        }
+        
+        guard let lastName = txtLastName.text?.trimmingLeadingAndTrailingSpaces() else {
+            return
+        }
+        if lastName.count == 0 {
+            showOkAlert(title: "Error", message: "Please enter Last Name")
+            return
+        }
+        
+        guard let email = txtEmail.text?.trimmingLeadingAndTrailingSpaces() else {
+            return
+        }
+        if (email.count == 0) {
+            showOkAlert(title: "Error", message: "Please enter your email")
+            return
+        }
+        if !email.isValidEmail() {
+            showOkAlert(title: "Error", message: "Please enter valid email")
+            return
+        }
+        
+        guard let txtSerialNumber = txtSerialNumber.text?.trimmingLeadingAndTrailingSpaces() else{
+            return
+        }
+        if txtSerialNumber.count == 0 {
+            showOkAlert(title: "Error", message: "Please enter Device Serial Number")
+            return
+        }
+        
+        let parameters = ["first_name":firstName,
+                          "last_name":lastName,
+                          "email":email,
+                          "serial_number": txtSerialNumber]
+
+        IHProgressHUD.show()
+        ApiManager.shared.registerDevice(params: parameters) { (device, error) in
+            IHProgressHUD.dismiss()
+            DispatchQueue.main.async {
+                if error == nil {
+                    guard let device = device else {
+                        self.showOkAlert(title: "Error", message: "Something went wrong. Please try again.")
+                        return
+                    }
+                    var editedDevice = device
+                    editedDevice.email = email
+                    do {
+                         try UserDefaults.standard.setObject(editedDevice, forKey: UserDefaults.registeredDevice)
+                    } catch let error1 {
+                        print(error1.localizedDescription)
+                    }
+                    UserDefaults.standard.synchronize()
+                    self.performSegue(withIdentifier: "RegisteredViewController", sender: self)
+                } else {
+                    if let error = error {
+                        self.showOkAlert(title: "Error", message: "\(error.localizedDescription)")
+                    }
+                    
+                }
+            }
+            
+           
+        }
+        
+//
     }
+    
+    
     
     /*
     // MARK: - Navigation

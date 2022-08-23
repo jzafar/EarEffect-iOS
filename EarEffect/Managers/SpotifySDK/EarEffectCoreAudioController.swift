@@ -31,7 +31,7 @@ class EarEffectCoreAudioController: SPTCoreAudioController {
 //        // create a filter for the harsh frequencies
 //        var filterDescription = AudioComponentDescription()
 //        filterDescription.componentType = kAudioUnitType_Effect
-//        filterDescription.componentSubType = kAudioUnitSubType_ParametricEQ
+//        filterDescription.componentSubType = kAudioUnitSubType_PeakLimiter
 //        filterDescription.componentManufacturer = kAudioUnitManufacturer_Apple
 //        filterDescription.componentFlags = 0
 //        filterDescription.componentFlagsMask = 0
@@ -96,7 +96,9 @@ class EarEffectCoreAudioController: SPTCoreAudioController {
 //        let data = Data(bytes: audioFrames, count: Int(actualSampleCount))
 //        print("bytesInAudioBuffer output \(data)")
 //        print("=== toDeliverAudioFrames ===")
+//        CPP_Wrapper().attempt(toDeliverAudioFrames: audioFrames, ofCount: frameCount, streamDescription: audioDescription)
         return super.attempt(toDeliverAudioFrames: audioFrames, ofCount: frameCount, streamDescription: audioDescription)
+//        return frameCount
     }
 }
 

@@ -10,6 +10,40 @@
 namespace am
 {
 
+template<typename SampleType>
+struct StereoFrame
+{
+    SampleType left{0};
+    SampleType right{0};
+};
+
+template<typename SampleType>
+struct MidSideFrame
+{
+    SampleType mid{0};
+    SampleType side{0};
+};
+
+template<typename SampleType>
+[[nodiscard]] auto toMidSide(StereoFrame<SampleType> frame) noexcept -> MidSideFrame<SampleType>
+{
+    static constexpr auto const gain = static_cast<SampleType>(0.707946);  // -3dB
+    return {
+        /*.mid  = */ (frame.left + frame.right) * gain,
+        /*.side = */ (frame.left - frame.right) * gain,
+    };
+}
+
+template<typename SampleType>
+[[nodiscard]] auto toStereo(MidSideFrame<SampleType> frame) noexcept -> StereoFrame<SampleType>
+{
+    static constexpr auto const gain = static_cast<SampleType>(0.707946);  // -3dB
+    return {
+        /*.left  = */ (frame.mid + frame.side) * gain,
+        /*.right = */ (frame.mid - frame.side) * gain,
+    };
+}
+
 /// \brief Split stereo signal into mid & side channels. Can be reconstructed using mergeMidSideToStereo
 /// \details All supplied ranges must be equal in size to distance(lf, ll).
 ///

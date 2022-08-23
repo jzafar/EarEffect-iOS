@@ -22,12 +22,29 @@
 				<string>com.googleusercontent.apps.664847321403-e42cjkbb7grgn7hihoqqhl3ru6f2kcvb</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb571250811403505</string>
+			</array>
+		</dict>
 	</array>
+    <key>FacebookAppID</key>
+    <string>571250811403505</string>
+    <key>FacebookClientToken</key>
+    <string>04a58089525682ea763f926bf04d9318</string>
+    <key>FacebookDisplayName</key>
+    <string>EarEffect</string>
+    
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>spotify</string>
+        <string>fbapi</string>
+        <string>fb-messenger-share-api</string>
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>

@@ -8,7 +8,8 @@
 #include <numeric>
 #include <vector>
 
-namespace am {
+namespace am
+{
 template<typename T>
 struct AudioBuffer
 {
@@ -45,11 +46,13 @@ template<typename T>
 auto clip(AudioBuffer<T>& buffer, T low, T high) noexcept -> void;
 
 template<typename T>
+auto containsInvalidFloats(AudioBuffer<T> const& buffer) noexcept -> bool;
+
+template<typename T>
 inline AudioBuffer<T>::AudioBuffer(std::size_t channels, std::size_t samples)
-    : _buffer(channels * samples)
-    , _numChannels(channels)
-    , _numSamples(samples)
-{}
+    : _buffer(channels * samples), _numChannels(channels), _numSamples(samples)
+{
+}
 
 template<typename T>
 inline auto AudioBuffer<T>::numChannels() const noexcept -> std::size_t
@@ -99,15 +102,16 @@ inline auto AudioBuffer<T>::operator()(std::size_t channel, std::size_t sample) 
 template<typename T>
 auto applyGain(AudioBuffer<T>& buffer, LinearSmoothed<T>& gain) noexcept -> void
 {
-    if (buffer.numChannels() == 1UL) {
+    if (buffer.numChannels() == 1UL)
+    {
         auto channel = buffer.channel(0UL);
-        std::transform(channel.begin(), channel.end(), channel.begin(), [&gain](T x) {
-            return x * gain.getNextValue();
-        });
+        std::transform(channel.begin(), channel.end(), channel.begin(),
+                       [&gain](T x) { return x * gain.getNextValue(); });
         return;
     }
 
-    for (auto i{0UL}; i < buffer.numSamples(); ++i) {
+    for (auto i{0UL}; i < buffer.numSamples(); ++i)
+    {
         auto const smoothedGain = gain.getNextValue();
         for (auto ch{0UL}; ch < buffer.numChannels(); ++ch) { buffer(ch, i) *= smoothedGain; }
     }
@@ -116,7 +120,8 @@ auto applyGain(AudioBuffer<T>& buffer, LinearSmoothed<T>& gain) noexcept -> void
 template<typename T>
 inline auto applyGain(AudioBuffer<T>& buffer, T gain) noexcept -> void
 {
-    for (auto ch{0UL}; ch < buffer.numChannels(); ++ch) {
+    for (auto ch{0UL}; ch < buffer.numChannels(); ++ch)
+    {
         auto channel = buffer.channel(ch);
         std::transform(channel.begin(), channel.end(), channel.begin(), [gain](T x) { return x * gain; });
     }
@@ -131,12 +136,25 @@ inline auto clip(AudioBuffer<T>& buffer) noexcept -> void
 template<typename T>
 inline auto clip(AudioBuffer<T>& buffer, T low, T high) noexcept -> void
 {
-    for (auto ch{0UL}; ch < buffer.numChannels(); ++ch) {
+    for (auto ch{0UL}; ch < buffer.numChannels(); ++ch)
+    {
         auto channel = buffer.channel(ch);
-        std::transform(channel.begin(), channel.end(), channel.begin(), [low, high](T x) {
-            return std::clamp(x, low, high);
-        });
+        std::transform(channel.begin(), channel.end(), channel.begin(),
+                       [low, high](T x) { return std::clamp(x, low, high); });
     }
+}
+
+template<typename T>
+inline auto containsInvalidFloats(AudioBuffer<T> const& buffer) noexcept -> bool
+{
+    auto isInvalidFloat = [](auto sample) { return std::isnan(sample) || std::isinf(sample); };
+    for (auto ch{0UL}; ch < buffer.numChannels(); ++ch)
+    {
+        auto channel = buffer.channel(ch);
+        if (std::any_of(std::begin(channel), std::end(channel), isInvalidFloat)) { return true; };
+    }
+
+    return false;
 }
 
 }  // namespace am

@@ -4,7 +4,8 @@
 #include <cmath>
 #include <type_traits>
 
-namespace am {
+namespace am
+{
 
 template<typename T>
 class LinearSmoothed
@@ -42,7 +43,8 @@ public:
     {
         if (newValue == _target) return;
 
-        if (_stepsToTarget <= 0) {
+        if (_stepsToTarget <= 0)
+        {
             setCurrentAndTargetValue(newValue);
             return;
         }
@@ -59,18 +61,16 @@ public:
 
         --_countdown;
 
-        if (isSmoothing()) {
-            setNextValue();
-        } else {
-            _currentValue = _target;
-        }
+        if (isSmoothing()) { setNextValue(); }
+        else { _currentValue = _target; }
 
         return _currentValue;
     }
 
     T skip(int numSamples) noexcept
     {
-        if (numSamples >= _countdown) {
+        if (numSamples >= _countdown)
+        {
             setCurrentAndTargetValue(_target);
             return _target;
         }

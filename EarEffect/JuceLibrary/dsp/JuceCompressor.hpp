@@ -7,7 +7,8 @@
 
 #include <cassert>
 
-namespace am {
+namespace am
+{
 
 /**
     A simple compressor with standard threshold, ratio, attack time and release time
@@ -43,8 +44,10 @@ public:
     /** Processes the input and output samples supplied in the processing context. */
     void process(AudioBuffer<T>& buffer) noexcept
     {
-        for (auto ch = size_t{0}; ch < buffer.numChannels(); ++ch) {
-            for (auto i = size_t{0}; i < buffer.numSamples(); ++i) {
+        for (auto ch = size_t{0}; ch < buffer.numChannels(); ++ch)
+        {
+            for (auto i = size_t{0}; i < buffer.numSamples(); ++i)
+            {
                 buffer(ch, i) = processSample(static_cast<int>(ch), buffer(ch, i));
             }
         }

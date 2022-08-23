@@ -20,6 +20,8 @@ class PolicyViewController: UIViewController {
     
 
     @IBAction func AcceptButtonPressed(_ sender: Any) {
+        UserDefaults.standard.set(true, forKey: UserDefaults.privacyPolicy)
+        UserDefaults.standard.synchronize()
         let story = UIStoryboard(name: "Main", bundle:nil)
         let vc = story.instantiateViewController(withIdentifier: "RegiterNavigaton") as! UINavigationController
 //        let navRootView = UINavigationController(rootViewController: vc)

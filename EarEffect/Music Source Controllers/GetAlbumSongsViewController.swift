@@ -8,92 +8,142 @@
 import UIKit
 
 class GetAlbumSongsViewController: BaseViewController {
-
     @IBOutlet var tblView: UITableView!
     var stream: Streams = .spotify
     var type: AlbumOrArtist = .Albums
-    var songs : SpotifyPlayListDetailsResponse?
+    var songs: SpotifyPlayListDetailsResponse?
     var spotifyPlayList: SpotifyPlayList?
-    var spotifyArtistAlbum:Track?
+    var spotifyArtistAlbum: Track?
     var playerController: PlayerViewController?
     var albumTracks: [SpotifyAudioTrack]?
+    var appleAlbum: AppleAlbums?
+    var appleArtist: AppleArtist?
+    var applePlayList: ApplePlayList?
+    var appleSongs: [AppleTrack] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 //        _ = loadPlayerView(in: playerView)
-         fetchData()
+        fetchData()
     }
 
     func fetchData() {
-        
-            switch stream {
-            case .spotify:
-                switch type {
-                case .Albums:
-                    break
-                case .Artists:
-                    if let spotifyArtist = spotifyArtistAlbum {
-                        fetchSpotifyArtistsAlbumTrack(artist: spotifyArtist)
-                    }
-                    
-                case .PlayLists:
-                    if let spotifyPlayList = spotifyPlayList {
-                        fetchSpotifyPlayListSongs(playListID: spotifyPlayList)
-                    }
+        switch stream {
+        case .spotify:
+            switch type {
+            case .Albums:
+                break
+            case .Artists:
+                if let spotifyArtist = spotifyArtistAlbum {
+                    fetchSpotifyArtistsAlbumTrack(artist: spotifyArtist)
                 }
-            case .amazon:
-                break
-            case .apple:
-                break
-            case .youtube:
+
+            case .PlayLists:
+                if let spotifyPlayList = spotifyPlayList {
+                    fetchSpotifyPlayListSongs(playListID: spotifyPlayList)
+                }
+            case .Songs:
                 break
             }
-        
+        case .amazon:
+            break
+        case .apple:
+            switch type {
+            case .Albums:
+                fetchAppleAlbumSongs()
+            case .Artists:
+                break
+            case .PlayLists:
+                fetchApplePlayListSongs()
+            case .Songs:
+                fetchAppleSongs()
+            }
+        case .youtube:
+            break
+        }
+    }
+
+    func fetchApplePlayListSongs() {
+        if let applePlayList = applePlayList {
+            AppleMusicApiCaller.shared.fetchPlyListSongs(playListId: applePlayList.id) { response in
+                if let response = response?.data {
+                    self.appleSongs = response
+                    DispatchQueue.main.async {
+                        self.tblView.reloadData()
+                    }
+                }
+            }
+        }
+    }
+
+    func fetchAppleSongs() {
+        AppleMusicApiCaller.shared.fetchSongs { response in
+            if let response = response?.data {
+                self.appleSongs = response
+                DispatchQueue.main.async {
+                    self.tblView.reloadData()
+                }
+            }
+        }
+    }
+
+    func fetchAppleAlbumSongs() {
+        if let appleAlbum = appleAlbum {
+            AppleMusicApiCaller.shared.fetchAlbumSongs(albumId: appleAlbum.id) { response in
+                if let response = response?.data {
+                    self.appleSongs = response
+                    DispatchQueue.main.async {
+                        self.tblView.reloadData()
+                    }
+                }
+            }
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PlayerViewController" {
-            self.playerController = segue.destination as? PlayerViewController
-       }
+            playerController = segue.destination as? PlayerViewController
+        }
     }
-    
+
     func fetchSpotifyPlayListSongs(playListID: SpotifyPlayList) {
 //        if (playListID.trackCount > 0){
-            APICaller.shared.getPlayListDetails(for: playListID.id) { [weak self] results  in
-                DispatchQueue.main.async {
-                    switch results {
-                    case .success(let response):
-                        if let result = response {
-                            self?.songs = result
-                            self?.tblView.reloadData()
-                        }
-                    case .failure(let error):
-                        print("error in fetching list songs \(error.localizedDescription)")
+        APICaller.shared.getPlayListDetails(for: playListID.id) { [weak self] results in
+            DispatchQueue.main.async {
+                switch results {
+                case let .success(response):
+                    if let result = response {
+                        self?.songs = result
+                        self?.tblView.reloadData()
                     }
+                case let .failure(error):
+                    print("error in fetching list songs \(error.localizedDescription)")
                 }
             }
+        }
 //        }
     }
-    func fetchSpotifyArtistsAlbumTrack(artist: Track){
-        if let album  = artist.album {
-            APICaller.shared.getAlbumsTracks(albumID: album.id, completion: {  [weak self] results  in
+
+    func fetchSpotifyArtistsAlbumTrack(artist: Track) {
+        if let album = artist.album {
+            APICaller.shared.getAlbumsTracks(albumID: album.id, completion: { [weak self] results in
                 DispatchQueue.main.async {
                     switch results {
-                    case .success(let response):
+                    case let .success(response):
                         if let result = response {
                             self?.albumTracks = result
                             self?.tblView.reloadData()
                         }
-                    case .failure(let error):
+                    case let .failure(error):
                         print("error in fetching list songs \(error.localizedDescription)")
                     }
                 }
             })
         }
-       
     }
+
     @IBAction func settingsButtonPressed(_ sender: UIBarButtonItem) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
-        //vc.modalPresentationStyle = .overCurrentContext
+        // vc.modalPresentationStyle = .overCurrentContext
         vc.modalPresentationStyle = UIModalPresentationStyle.custom
         vc.transitioningDelegate = self
         present(vc, animated: true, completion: nil)
@@ -115,50 +165,91 @@ extension GetAlbumSongsViewController: UITableViewDelegate {
                 }
             }
         }
-        if type == .PlayLists{
-            guard let response = songs else{
+        if type == .PlayLists {
+            guard let response = songs else {
                 return
             }
             SpotifyPlayer.shared.playSong(uri: response.uri, index: indexPath.row, startingWithPosition: TimeInterval(0)) { error in
                 print(error)
             }
         }
-        
     }
 }
 
 extension GetAlbumSongsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if type == .Artists {
-            return albumTracks?.count ?? 0
-        }
-        if type == .PlayLists{
-            if let songs = songs?.tracks?.items {
-                return songs.count
+        switch stream {
+        case .spotify:
+            switch type {
+            case .Albums:
+                return albumTracks?.count ?? 0
+            case .Artists:
+                return 0
+            case .PlayLists:
+                if let songs = songs?.tracks?.items {
+                    return songs.count
+                }
+            case .Songs:
+                break
             }
+        case .amazon:
+            break
+        case .apple:
+            switch type {
+            case .Albums, .PlayLists, .Songs:
+                return appleSongs.count
+            case .Artists:
+                break
+            }
+        case .youtube:
+            break
         }
-        
-       return 0
+
+        return 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
                                                  for: indexPath) as! AlbumSongTableViewCell
-        if type == .Artists {
-            if let songs = albumTracks {
-                let song = songs[indexPath.row]
-                cell.setData(song: song, image: spotifyArtistAlbum?.album?.images?.first?.url)
+        switch stream {
+        case .spotify:
+            switch type {
+            case .Albums:
+                if let songs = songs?.tracks?.items {
+                    let song = songs[indexPath.row]
+                    cell.setData(song: song)
+                }
+            case .Artists:
+                if let songs = albumTracks {
+                    let song = songs[indexPath.row]
+                    cell.setData(song: song, image: spotifyArtistAlbum?.album?.images?.first?.url)
+                }
+            case .PlayLists:
+                if let songs = songs?.tracks?.items {
+                    let song = songs[indexPath.row]
+                    cell.setData(song: song)
+                }
+            case .Songs:
+                break
             }
-        } else {
-            if let songs = songs?.tracks?.items {
-                let song = songs[indexPath.row]
-                cell.setData(song: song)
+        case .amazon:
+            break
+        case .apple:
+            switch type {
+            case .Albums, .PlayLists, .Songs:
+                let song = appleSongs[indexPath.row]
+                cell.setAppleSongData(track: song)
+            case .Artists:
+                break
             }
+        case .youtube:
+            break
         }
-        
+
         return cell
     }
 }
+
 extension GetAlbumSongsViewController: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         return CardPresentationController(presentedViewController: presented, presenting: presenting)

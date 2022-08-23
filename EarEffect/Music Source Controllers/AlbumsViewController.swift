@@ -17,10 +17,16 @@ class AlbumsViewController: BaseViewController {
     var playerController: PlayerViewController?
     var artitsAlabum: [Track]?
     var spotifySelectedArtist: SpotifyArtist?
+    var appleSelectedArtist: AppleArtist?
+    var appleAlbums: [AppleAlbums] = []
+    var applePlayList: [ApplePlayList] = []
+    var appleArtist: [AppleArtist] = []
     var shouldFetchArtistAlbum = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let spotifySelectedArtist = spotifySelectedArtist {
+        if let appleSelectedArtist = appleSelectedArtist {
+            fetchAppleArtistAlbums(artist: appleSelectedArtist)
+        } else if let spotifySelectedArtist = spotifySelectedArtist {
             fetchSpotifyArtists(artist: spotifySelectedArtist)
         } else {
             switch stream {
@@ -32,15 +38,71 @@ class AlbumsViewController: BaseViewController {
                     fetchArtist()
                 case .PlayLists:
                     fetchSpotifyPlayLists()
+                case .Songs:
+                    break
                 }
 
-            case .apple: break
+            case .apple:
+                switch type {
+                case .Albums:
+                    fetchAppleAlbums()
+                case .Artists:
+                    fetchAppleArtist()
+                case .PlayLists:
+                    fetchApplePlayList()
+                case .Songs:
+                    break
+                }
             case .amazon: break
             case .youtube: break
             }
         }
     }
 
+    func fetchApplePlayList(){
+        AppleMusicApiCaller.shared.fetchPlayList { media in
+            DispatchQueue.main.async {
+                if let playList = media {
+                    self.applePlayList = playList
+                    self.collectionView.reloadData()
+                }
+            }
+        }
+    }
+    
+    func fetchAppleAlbums(){
+        AppleMusicApiCaller.shared.fetchAlbums { [weak self] albums in
+            DispatchQueue.main.async {
+                if let appleAlbums = albums {
+                    self?.appleAlbums = appleAlbums
+                    self?.collectionView.reloadData()
+                }
+            }
+        }
+    }
+    
+    func fetchAppleArtist(){
+        AppleMusicApiCaller.shared.fetchArtist { [weak self] artist in
+            DispatchQueue.main.async {
+                if let artist = artist?.data {
+                    self?.appleArtist = artist
+                    self?.collectionView.reloadData()
+                }
+            }
+        }
+    }
+    
+    func fetchAppleArtistAlbums(artist: AppleArtist){
+        AppleMusicApiCaller.shared.fetchArtistAlbums(artistId: artist.id) { [weak self] response in
+            DispatchQueue.main.async {
+                if let appleAlbums = response {
+                    self?.appleAlbums = appleAlbums
+                    self?.collectionView.reloadData()
+                }
+            }
+        }
+    }
+    
     func fetchSpotifyArtists(artist: SpotifyArtist){
         APICaller.shared.getArtistTopSongs(artistID: artist.id, completion: {  [weak self] results  in
             DispatchQueue.main.async {
@@ -120,9 +182,30 @@ class AlbumsViewController: BaseViewController {
                     vc.type = .PlayLists
                     vc.stream = stream
                     vc.spotifyPlayList = playList
+                case .Songs:
+                    break
                 }
 
-            case .apple: break
+            case .apple:
+                switch type {
+                case .Albums:
+                    let album = self.appleAlbums[indexPath.row]
+                    vc.type = .Albums
+                    vc.stream = stream
+                    vc.appleAlbum = album
+                case .Artists:
+                    let artist = self.appleArtist[indexPath.row]
+                    vc.type = .Artists
+                    vc.stream = stream
+                    vc.appleArtist = artist
+                case .PlayLists:
+                    let playList = self.applePlayList[indexPath.row]
+                    vc.type = .PlayLists
+                    vc.stream = stream
+                    vc.applePlayList = playList
+                case .Songs:
+                    break
+                }
             case .amazon: break
             case .youtube: break
             }
@@ -170,10 +253,30 @@ extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDele
                     } else {
                         cell.setData(name: playList.name, image: nil)
                     }
-                    
+                case .Songs:
+                    break
                 }
 
-            case .apple: break
+            case .apple:
+                switch type {
+                
+                case .Albums:
+                    let album = self.appleAlbums[indexPath.row]
+                    if let artWork = album.attributes.artwork {
+                        let imageUrl = artWork.imageURL(size: CGSize(width: 200, height: 200))
+                        cell.setData(name: album.attributes.name, image: imageUrl)
+                    } else {
+                        cell.setData(name: album.attributes.name, image: nil)
+                    }
+                case .Artists:
+                    let artist = self.appleArtist[indexPath.row]
+                    cell.setAppleArtistArtwork(artist: artist)
+                case .PlayLists:
+                    let playList = self.applePlayList[indexPath.row]
+                    cell.setData(name: playList.attributes.name, image: nil)
+                case .Songs:
+                    break
+                }
             case .amazon: break
             case .youtube: break
             }
@@ -196,9 +299,22 @@ extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDele
                 return spotifyArtists.count
             case .PlayLists:
                 return spotifyPlayLists.count
+            case .Songs:
+                break
             }
 
-        case .apple: break
+        case .apple:
+            switch type {
+            case .Albums:
+                return self.appleAlbums.count
+            case .Artists:
+                return self.appleArtist.count
+            case .PlayLists:
+                return self.applePlayList.count
+            case .Songs:
+                break
+            }
+            
         case .amazon: break
         case .youtube: break
         }
@@ -207,11 +323,18 @@ extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDele
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if type == .Artists && shouldFetchArtistAlbum {
+        if type == .Artists && shouldFetchArtistAlbum && stream == .spotify {
             let inst = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AlbumsViewController") as! AlbumsViewController
             inst.type = .Artists
             inst.stream = .spotify
             inst.spotifySelectedArtist = self.spotifyArtists[indexPath.row]
+            inst.shouldFetchArtistAlbum = false
+            self.navigationController?.pushViewController(inst, animated: true)
+        } else if type == .Artists && shouldFetchArtistAlbum && stream == .apple {
+            let inst = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AlbumsViewController") as! AlbumsViewController
+            inst.type = .Albums
+            inst.stream = .apple
+            inst.appleSelectedArtist = self.appleArtist[indexPath.row]
             inst.shouldFetchArtistAlbum = false
             self.navigationController?.pushViewController(inst, animated: true)
         } else {
@@ -240,6 +363,8 @@ extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDele
                 sectionHeader.sectionHeaderlabel.text = "Artists"
             case .PlayLists:
                 sectionHeader.sectionHeaderlabel.text = "PlayLists"
+            case .Songs:
+                break
             }
             return sectionHeader
         }

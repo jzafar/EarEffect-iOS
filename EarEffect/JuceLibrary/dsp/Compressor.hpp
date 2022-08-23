@@ -6,7 +6,8 @@
 
 #include <algorithm>
 
-namespace am {
+namespace am
+{
 template<typename T>
 struct Compressor
 {
@@ -33,7 +34,7 @@ struct Compressor
     auto reset() -> void;
 
 private:
-    using Filter = StateVariableFilter<T>;
+    using Filter = SVFHighpass<T>;
 
     [[nodiscard]] auto calculateAttackOrRelease(T value) const noexcept -> T;
 
@@ -65,7 +66,7 @@ auto Compressor<T>::process(AudioBuffer<T>& buffer) -> void
     auto const numSamples  = buffer.numSamples();
     auto const numChannels = buffer.numChannels();
 
-    _sideChainFilter.parameter({Filter::Type::highPass, _parameter.cutoff});
+    _sideChainFilter.template setCutoffFrequency<true>(_parameter.cutoff);
 
     auto const threshold = _parameter.threshold;
     auto const ratio     = _parameter.ratio > T{30} ? T{200} : _parameter.ratio;
@@ -73,7 +74,8 @@ auto Compressor<T>::process(AudioBuffer<T>& buffer) -> void
     auto const alphaA    = calculateAttackOrRelease(_parameter.attack * static_cast<T>(0.001));
     auto const alphaR    = calculateAttackOrRelease(_parameter.release * static_cast<T>(0.001));
 
-    for (auto sampleIdx{0U}; sampleIdx < numSamples; ++sampleIdx) {
+    for (auto sampleIdx{0U}; sampleIdx < numSamples; ++sampleIdx)
+    {
         auto mono = T{0};
         for (auto ch{0U}; ch < numChannels; ++ch) { mono += buffer(ch, sampleIdx); }
         mono /= static_cast<T>(numChannels);
@@ -91,25 +93,20 @@ auto Compressor<T>::process(AudioBuffer<T>& buffer) -> void
         auto const ratioQuotient  = knee > T{0} ? ratio * factor + T{1} * (-factor + T{1}) : T{1};
 
         auto yg = T{0};
-        if (env < kneedThreshold) {
-            yg = env;
-        } else {
-            yg = kneedThreshold + (env - kneedThreshold) / (ratio / ratioQuotient);
-        }
+        if (env < kneedThreshold) { yg = env; }
+        else { yg = kneedThreshold + (env - kneedThreshold) / (ratio / ratioQuotient); }
 
         auto yl       = T{0};
         auto const xl = env - yg;
-        if (xl > _ylPrev) {
-            yl = alphaA * _ylPrev + (T{1} - alphaA) * xl;
-        } else {
-            yl = alphaR * _ylPrev + (T{1} - alphaR) * xl;
-        }
+        if (xl > _ylPrev) { yl = alphaA * _ylPrev + (T{1} - alphaA) * xl; }
+        else { yl = alphaR * _ylPrev + (T{1} - alphaR) * xl; }
 
         auto const controlCompressor = std::pow(T{10}, (T{1} - yl) * static_cast<T>(0.05));
 
         _ylPrev = yl;
 
-        for (auto ch{0U}; ch < numChannels; ++ch) {
+        for (auto ch{0U}; ch < numChannels; ++ch)
+        {
             auto const wet    = _parameter.wet;
             auto const makeup = _parameter.makeUp;
 

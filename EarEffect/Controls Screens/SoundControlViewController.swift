@@ -21,6 +21,7 @@ class SoundControlViewController: BaseViewController {
     @IBOutlet weak var lblMode: UILabel!
     @IBOutlet weak var lblDeviceName: UILabel!
     
+    @IBOutlet weak var scaleView: UIView!
     @IBOutlet weak var verticalSlider: VerticalSlider!
     @IBOutlet weak var controllView: UIView!
     @IBOutlet weak var modeView: UIView!
@@ -175,8 +176,8 @@ class SoundControlViewController: BaseViewController {
     @objc func openMusicSource(){
         if SpotifyAuthManager.shared.isSignedIn {
             self.performSegue(withIdentifier: "MusicDataViewController", sender: self)
-        } else {
-            
+        } else if AppleMusicManager.shared.isSignedIn {
+            self.performSegue(withIdentifier: "MusicDataViewController", sender: self)
         }
     }
     @IBAction func settingBtnPressed(_ sender: UIButton) {
@@ -203,6 +204,7 @@ class SoundControlViewController: BaseViewController {
     }
 
     func loadSelectedConfig(tag: Int) {
+        self.scaleView.isHidden = false
         if tag == 0 {
             let low = UserDefaults.standard.float(forKey: UserDefaults.low)
             knob.setValue(low, animated: true)
@@ -254,6 +256,7 @@ class SoundControlViewController: BaseViewController {
         unadjustAbleImage.isHidden = false
         lblKnobValue.isHidden = true
         dottedLines.isHidden = true
+        self.scaleView.isHidden = true
     }
 
     @objc func offButtonPressed(_ sender: UIButton) {

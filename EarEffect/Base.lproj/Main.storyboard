@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tXC-PK-Zx9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5r4-UQ-c4h">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -2091,7 +2091,7 @@ Enjoy your EarEffect life.</string>
                                                                         <rect key="frame" x="20" y="20" width="101" height="101"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSW-EY-MRP" customClass="BorderView" customModule="EarEffect" customModuleProvider="target">
-                                                                                <rect key="frame" x="5" y="5" width="91" height="91"/>
+                                                                                <rect key="frame" x="10" y="10" width="81" height="81"/>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2100,7 +2100,7 @@ Enjoy your EarEffect life.</string>
                                                                                 </userDefinedRuntimeAttributes>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4V-Fz-OVh" customClass="Knob" customModule="EarEffect" customModuleProvider="target">
-                                                                                <rect key="frame" x="5" y="5" width="91" height="91"/>
+                                                                                <rect key="frame" x="10" y="10" width="81" height="81"/>
                                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             </view>
@@ -2109,12 +2109,12 @@ Enjoy your EarEffect life.</string>
                                                                         <constraints>
                                                                             <constraint firstItem="a4V-Fz-OVh" firstAttribute="trailing" secondItem="KSW-EY-MRP" secondAttribute="trailing" id="74q-bW-zVB"/>
                                                                             <constraint firstAttribute="width" secondItem="ixC-f5-eub" secondAttribute="height" multiplier="1:1" id="8vE-Py-4n9"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="a4V-Fz-OVh" secondAttribute="trailing" constant="5" id="IXr-hm-JQy"/>
-                                                                            <constraint firstItem="a4V-Fz-OVh" firstAttribute="top" secondItem="ixC-f5-eub" secondAttribute="top" constant="5" id="Lsd-YI-4DO"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="a4V-Fz-OVh" secondAttribute="trailing" constant="10" id="IXr-hm-JQy"/>
+                                                                            <constraint firstItem="a4V-Fz-OVh" firstAttribute="top" secondItem="ixC-f5-eub" secondAttribute="top" constant="10" id="Lsd-YI-4DO"/>
                                                                             <constraint firstItem="a4V-Fz-OVh" firstAttribute="bottom" secondItem="KSW-EY-MRP" secondAttribute="bottom" id="Puf-oC-1UZ"/>
-                                                                            <constraint firstAttribute="bottom" secondItem="a4V-Fz-OVh" secondAttribute="bottom" constant="5" id="eIH-xR-c8y"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="a4V-Fz-OVh" secondAttribute="bottom" constant="10" id="eIH-xR-c8y"/>
                                                                             <constraint firstItem="a4V-Fz-OVh" firstAttribute="leading" secondItem="KSW-EY-MRP" secondAttribute="leading" id="r8A-Hk-r5m"/>
-                                                                            <constraint firstItem="a4V-Fz-OVh" firstAttribute="leading" secondItem="ixC-f5-eub" secondAttribute="leading" constant="5" id="uOw-RP-f2y"/>
+                                                                            <constraint firstItem="a4V-Fz-OVh" firstAttribute="leading" secondItem="ixC-f5-eub" secondAttribute="leading" constant="10" id="uOw-RP-f2y"/>
                                                                             <constraint firstItem="a4V-Fz-OVh" firstAttribute="top" secondItem="KSW-EY-MRP" secondAttribute="top" id="x2A-ET-DGx"/>
                                                                         </constraints>
                                                                     </view>
@@ -2122,22 +2122,22 @@ Enjoy your EarEffect life.</string>
                                                                         <rect key="frame" x="20" y="20" width="111" height="111"/>
                                                                     </imageView>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOb-6j-Cct">
-                                                                        <rect key="frame" x="20" y="126" width="101" height="20"/>
+                                                                        <rect key="frame" x="20" y="111" width="101" height="50"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXh-Xa-gpr">
-                                                                                <rect key="frame" x="0.0" y="5" width="22.5" height="10"/>
+                                                                                <rect key="frame" x="-15" y="0.0" width="22.5" height="10"/>
                                                                                 <fontDescription key="fontDescription" name="Kallisto-Light" family="Kallisto-Light" pointSize="10"/>
                                                                                 <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzu-kh-W2T">
-                                                                                <rect key="frame" x="46.5" y="5.5" width="7.5" height="9"/>
+                                                                                <rect key="frame" x="51.5" y="15.5" width="7.5" height="9"/>
                                                                                 <fontDescription key="fontDescription" name="Kallisto-Bold" family="Kallisto-Bold" pointSize="9"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgj-kN-F4C">
-                                                                                <rect key="frame" x="82" y="5" width="19" height="10"/>
+                                                                                <rect key="frame" x="92" y="0.0" width="19" height="10"/>
                                                                                 <fontDescription key="fontDescription" name="Kallisto-Light" family="Kallisto-Light" pointSize="10"/>
                                                                                 <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -2145,12 +2145,12 @@ Enjoy your EarEffect life.</string>
                                                                         </subviews>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
-                                                                            <constraint firstItem="Tgj-kN-F4C" firstAttribute="centerY" secondItem="Zzu-kh-W2T" secondAttribute="centerY" id="AMp-Zz-GGq"/>
-                                                                            <constraint firstItem="xXh-Xa-gpr" firstAttribute="centerY" secondItem="Zzu-kh-W2T" secondAttribute="centerY" id="DUK-bf-6mZ"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="Tgj-kN-F4C" secondAttribute="trailing" id="Fzj-ht-Pm3"/>
-                                                                            <constraint firstItem="Zzu-kh-W2T" firstAttribute="centerY" secondItem="WOb-6j-Cct" secondAttribute="centerY" id="G4S-GP-I7B"/>
-                                                                            <constraint firstItem="xXh-Xa-gpr" firstAttribute="leading" secondItem="WOb-6j-Cct" secondAttribute="leading" id="c8I-zJ-nq7"/>
-                                                                            <constraint firstAttribute="height" constant="20" id="l8V-RN-Hcw"/>
+                                                                            <constraint firstItem="xXh-Xa-gpr" firstAttribute="top" secondItem="WOb-6j-Cct" secondAttribute="top" id="2dX-xA-auo"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="Tgj-kN-F4C" secondAttribute="trailing" constant="-10" id="Fzj-ht-Pm3"/>
+                                                                            <constraint firstItem="Zzu-kh-W2T" firstAttribute="centerY" secondItem="WOb-6j-Cct" secondAttribute="centerY" constant="-5" id="G4S-GP-I7B"/>
+                                                                            <constraint firstItem="xXh-Xa-gpr" firstAttribute="leading" secondItem="WOb-6j-Cct" secondAttribute="leading" constant="-15" id="c8I-zJ-nq7"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="l8V-RN-Hcw"/>
+                                                                            <constraint firstItem="Tgj-kN-F4C" firstAttribute="top" secondItem="WOb-6j-Cct" secondAttribute="top" id="xZi-Qp-Phk"/>
                                                                         </constraints>
                                                                     </view>
                                                                 </subviews>
@@ -2165,8 +2165,8 @@ Enjoy your EarEffect life.</string>
                                                                     <constraint firstItem="7qN-HN-ff1" firstAttribute="top" secondItem="ixC-f5-eub" secondAttribute="top" id="aaY-vY-boh"/>
                                                                     <constraint firstItem="WOb-6j-Cct" firstAttribute="leading" secondItem="ixC-f5-eub" secondAttribute="leading" id="hFR-kF-Bdt"/>
                                                                     <constraint firstItem="7qN-HN-ff1" firstAttribute="bottom" secondItem="ixC-f5-eub" secondAttribute="bottom" constant="10" id="jfy-VM-Zvr"/>
-                                                                    <constraint firstItem="WOb-6j-Cct" firstAttribute="top" secondItem="ixC-f5-eub" secondAttribute="bottom" constant="5" id="k6x-0c-YZO"/>
-                                                                    <constraint firstItem="Zzu-kh-W2T" firstAttribute="centerX" secondItem="a4V-Fz-OVh" secondAttribute="centerX" id="rpI-sw-ywr"/>
+                                                                    <constraint firstItem="WOb-6j-Cct" firstAttribute="top" secondItem="ixC-f5-eub" secondAttribute="bottom" constant="-10" id="k6x-0c-YZO"/>
+                                                                    <constraint firstItem="Zzu-kh-W2T" firstAttribute="centerX" secondItem="a4V-Fz-OVh" secondAttribute="centerX" constant="5" id="rpI-sw-ywr"/>
                                                                     <constraint firstItem="WOb-6j-Cct" firstAttribute="trailing" secondItem="ixC-f5-eub" secondAttribute="trailing" id="wCF-tz-u2N"/>
                                                                     <constraint firstAttribute="height" constant="155" id="zoB-fV-mbF"/>
                                                                 </constraints>
@@ -2532,6 +2532,7 @@ Enjoy your EarEffect life.</string>
                         <outlet property="lblMode" destination="PRP-SH-cbN" id="Sr6-v2-TVp"/>
                         <outlet property="lblModelName" destination="2mZ-97-HBB" id="Y15-Zz-6G8"/>
                         <outlet property="modeView" destination="U28-vn-uUz" id="JoL-ko-WBm"/>
+                        <outlet property="scaleView" destination="WOb-6j-Cct" id="Qeg-Og-7gB"/>
                         <outlet property="scrollView" destination="EL3-pb-sBN" id="LGg-AD-6pi"/>
                         <outlet property="shadowView" destination="KSW-EY-MRP" id="PHb-yn-UQb"/>
                         <outlet property="unadjustAbleImage" destination="7qN-HN-ff1" id="ULP-DT-aje"/>
@@ -3706,6 +3707,7 @@ Enjoy your EarEffect life.</string>
                     </view>
                     <navigationItem key="navigationItem" id="fM4-Be-42L"/>
                     <connections>
+                        <outlet property="btnAppleMusic" destination="H02-CS-TIH" id="91v-x5-FOL"/>
                         <outlet property="btnSpotify" destination="gEL-Fz-pLH" id="BhD-rH-uVy"/>
                     </connections>
                 </viewController>
@@ -3779,6 +3781,7 @@ Enjoy your EarEffect life.</string>
                     <connections>
                         <outlet property="tableView" destination="Lro-W3-Nwn" id="eSj-je-ta7"/>
                         <segue destination="cms-JD-JFm" kind="show" identifier="AlbumsViewController" id="wmW-iy-1f6"/>
+                        <segue destination="m88-mi-5dr" kind="show" identifier="GetAlbumSongsViewController" id="WLz-iI-6N9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v8z-kL-kpC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4046,7 +4049,7 @@ Enjoy your EarEffect life.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b72-vW-NDg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5306" y="2232"/>
+            <point key="canvasLocation" x="5466" y="2189"/>
         </scene>
         <!--Player View Controller-->
         <scene sceneID="4R3-zY-ioa">
@@ -5470,9 +5473,6 @@ Enjoy your EarEffect life.</string>
         <designable name="5dr-9Z-rUw">
             <size key="intrinsicContentSize" width="45" height="29"/>
         </designable>
-        <designable name="6DP-Uf-J1p">
-            <size key="intrinsicContentSize" width="30" height="-1"/>
-        </designable>
         <designable name="DqK-Fb-O5J">
             <size key="intrinsicContentSize" width="46" height="29"/>
         </designable>
@@ -5499,9 +5499,6 @@ Enjoy your EarEffect life.</string>
         </designable>
         <designable name="RUI-Vh-Qrh">
             <size key="intrinsicContentSize" width="60.5" height="21"/>
-        </designable>
-        <designable name="UwA-OL-dDA">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
         </designable>
         <designable name="V41-RF-K9X">
             <size key="intrinsicContentSize" width="46" height="29"/>
@@ -5538,9 +5535,6 @@ Enjoy your EarEffect life.</string>
         </designable>
         <designable name="dZr-em-Ax4">
             <size key="intrinsicContentSize" width="50" height="32"/>
-        </designable>
-        <designable name="erd-UM-4bo">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
         </designable>
         <designable name="g02-Py-hdw">
             <size key="intrinsicContentSize" width="138" height="32"/>
@@ -5590,6 +5584,7 @@ Enjoy your EarEffect life.</string>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="XD5-Pw-Pyp"/>
+        <segue reference="WLz-iI-6N9"/>
         <segue reference="IBU-xY-Zc7"/>
         <segue reference="IrT-dA-mdP"/>
         <segue reference="uA9-fh-AQy"/>

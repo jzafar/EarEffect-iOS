@@ -3,7 +3,8 @@
 #include "Compressor.hpp"
 #include "MidSide.hpp"
 
-namespace am {
+namespace am
+{
 
 template<typename T>
 using MidSideCompressor = MidSide<Compressor<T>>;

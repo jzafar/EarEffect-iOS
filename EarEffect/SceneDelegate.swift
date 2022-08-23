@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FacebookCore
+import FBSDKCoreKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -27,6 +29,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // For spotify authorization and authentication flow
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
         guard let url = URLContexts.first?.url else { return }
+//        let appId: String = Settings.appId
+//        if url.scheme != nil && url.scheme!.hasPrefix("fb\(appId)") && url.host ==  "authorize" {
+//        return ApplicationDelegate.shared.application(app, open: url, options: options)
+//        }
+//        ApplicationDelegate.shared.application(
+//                UIApplication.shared,
+//                open: url,
+//                sourceApplication: nil,
+//                annotation: [UIApplication.OpenURLOptionsKey.annotation]
+//            )
+        
         SpotifyAuthManager.shared.handleAuthCallBack(url: url)
     }
 
